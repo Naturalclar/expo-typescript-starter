@@ -1,0 +1,42 @@
+version: 2.1
+
+commands:
+  restore_module_cache:
+    parameters:
+      module_path:
+        type: string
+    steps:
+      - restore_cache:
+          keys:
+            - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/yarn.lock" }}
+  save_module_cache:
+    parameters:
+      module_path:
+        type: string
+    steps:
+      - save_cache:
+          key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/yarn.lock" }}
+          paths:
+            - << parameters.module_path >>/node_modules
+
+  setup_and_test:
+    steps:
+      - checkout
+      - restore_module_cache: { module_path: ./ }
+      - run: yarn
+      - save_module_cache: { module_path: ./ }
+      - run: yarn type-check
+      - run: yarn lint
+jobs:
+  test:
+    docker:
+      - image: circleci/node:8.11.3
+    working_directory: ~/app
+    steps:
+      - setup_and_test
+
+workflows:
+  version: 2.1
+  test_workflow:
+    jobs:
+      - test
