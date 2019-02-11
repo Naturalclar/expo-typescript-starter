@@ -12,7 +12,14 @@ module.exports = {
     "react/jsx-filename-extension": [2, { extensions: [".tsx", ".ts"] }],
     // use custom non-unused-vars for typescript
     "no-unused-vars": "off",
-    "typescript/no-unused-vars": ["error"]
+    "typescript/no-unused-vars": ["error"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: ["**/*.test.tsx"]
+      }
+    ],
+    "import/no-unresolved": [2, { ignore: ["./assets"] }]
   },
   settings: {
     "import/resolver": {

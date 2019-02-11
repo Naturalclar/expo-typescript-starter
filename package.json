@@ -14,8 +14,9 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@types/node": "^10.12.24",
     "expo": "^32.0.0",
-    "react": "16.5.0",
+    "react": "16.5.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^3.0.9"
   },
@@ -37,6 +38,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "jest-expo": "^32.0.0",
     "prettier": "^1.16.4",
+    "react-test-renderer": "^16.5.1",
     "typescript": "^3.3.3",
     "typescript-eslint-parser": "^22.0.0"
   },
