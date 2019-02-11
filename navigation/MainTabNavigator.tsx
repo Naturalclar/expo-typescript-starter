@@ -9,6 +9,7 @@ import TabBarIcon from "../components/TabBarIcon";
 import HomeScreen from "../screens/HomeScreen";
 import LinksScreen from "../screens/LinksScreen";
 import SettingsScreen from "../screens/SettingsScreen";
+import MyPageScreen from "../screens/MyPageScreen";
 
 interface TabProps {
   focused: boolean;
@@ -23,11 +24,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }: TabProps) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === "ios"
-          ? `ios-information-circle${focused ? "" : "-outline"}`
-          : "md-information-circle"
-      }
+      name={Platform.OS === "ios" ? `ios-home` : "md-home"}
     />
   )
 };
@@ -37,11 +34,11 @@ const LinksStack = createStackNavigator({
 });
 
 LinksStack.navigationOptions = {
-  tabBarLabel: "Links",
+  tabBarLabel: "Find",
   tabBarIcon: ({ focused }: TabProps) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "ios" ? "ios-link" : "md-link"}
+      name={Platform.OS === "ios" ? "ios-compass" : "md-compass"}
     />
   )
 };
@@ -51,11 +48,25 @@ const SettingsStack = createStackNavigator({
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: "Settings",
+  tabBarLabel: "Notifications",
   tabBarIcon: ({ focused }: TabProps) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "ios" ? "ios-options" : "md-options"}
+      name={Platform.OS === "ios" ? "ios-notifications" : "md-notifications"}
+    />
+  )
+};
+
+const MyPageStack = createStackNavigator({
+  MyPage: MyPageScreen
+});
+
+MyPageStack.navigationOptions = {
+  tabBarLabel: "MyPage",
+  tabBarIcon: ({ focused }: TabProps) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === "ios" ? "ios-person" : "md-person"}
     />
   )
 };
@@ -63,5 +74,6 @@ SettingsStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  SettingsStack
+  SettingsStack,
+  MyPageStack
 });
