@@ -16,7 +16,7 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       "error",
       {
-        devDependencies: ["**/*.test.tsx"]
+        devDependencies: ["**/*.test.tsx", "**/*.story.tsx"]
       }
     ],
     "import/no-unresolved": [2, { ignore: ["./assets"] }]
