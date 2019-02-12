@@ -7,7 +7,8 @@
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "lint": "eslint . --ext '.ts, .tsx'",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "jest": {
     "preset": "jest-expo"
@@ -25,6 +26,11 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-knobs": "^4.1.11",
+    "@storybook/addon-options": "^4.1.11",
+    "@storybook/addon-viewport": "^4.1.11",
+    "@storybook/react": "^4.1.11",
     "@types/expo": "^32.0.0",
     "@types/jest": "^24.0.0",
     "@types/react": "^16.8.2",
@@ -36,6 +42,9 @@
     "@types/redux-logger": "^3.0.6",
     "@types/redux-persist": "^4.3.1",
     "@types/redux-thunk": "^2.1.0",
+    "@types/storybook__addon-actions": "^3.4.1",
+    "@types/storybook__addon-knobs": "^4.0.0",
+    "@types/storybook__react": "^4.0.0",
     "babel-preset-expo": "^5.0.0",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -47,8 +56,12 @@
     "eslint-plugin-typescript": "^0.14.0",
     "jest-expo": "^32.0.0",
     "prettier": "^1.16.4",
+    "react-art": "16.5.1",
+    "react-dom": "16.5.1",
+    "react-native-web": "^0.10.0",
     "react-test-renderer": "^16.5.1",
     "redux-logger": "^3.0.6",
+    "ts-loader": "^5.3.3",
     "typescript": "^3.3.3",
     "typescript-eslint-parser": "^22.0.0"
   },
