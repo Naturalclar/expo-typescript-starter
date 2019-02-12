@@ -1,7 +1,10 @@
 import * as React from "react";
 import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { AppLoading, Asset, Font, Icon } from "expo";
+import { Provider } from "react-redux";
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./src/store";
 import AppNavigator from "./src/navigation/AppNavigator";
 import { RobotDev, RobotProd } from "./src/assets/images";
 
@@ -57,12 +60,16 @@ export default class App extends React.Component<Props> {
       );
     }
     return (
-      <ActionSheetProvider>
-        <View style={styles.container}>
-          {Platform.OS === "ios" && <StatusBar barStyle="default" />}
-          <AppNavigator />
-        </View>
-      </ActionSheetProvider>
+      <Provider store={store}>
+        <PersistGate loading={<View />} persistor={persistor}>
+          <ActionSheetProvider>
+            <View style={styles.container}>
+              {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+              <AppNavigator />
+            </View>
+          </ActionSheetProvider>
+        </PersistGate>
+      </Provider>
     );
   }
 }
