@@ -2,8 +2,8 @@ import * as React from "react";
 import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { AppLoading, Asset, Font, Icon } from "expo";
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
-import AppNavigator from "./navigation/AppNavigator";
-import { RobotDev, RobotProd } from "./assets/images";
+import AppNavigator from "./src/navigation/AppNavigator";
+import { RobotDev, RobotProd } from "./src/assets/images";
 
 const styles = StyleSheet.create({
   container: {
