@@ -18,7 +18,11 @@
     "expo": "^32.0.0",
     "react": "16.5.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^3.0.9",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@types/expo": "^32.0.0",
@@ -27,6 +31,10 @@
     "@types/react-native": "^0.57.34",
     "@types/react-navigation": "^3.0.1",
     "@types/react-test-renderer": "^16.8.0",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.6",
+    "@types/redux-persist": "^4.3.1",
+    "@types/redux-thunk": "^2.1.0",
     "babel-preset-expo": "^5.0.0",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -39,6 +47,7 @@
     "jest-expo": "^32.0.0",
     "prettier": "^1.16.4",
     "react-test-renderer": "^16.5.1",
+    "redux-logger": "^3.0.6",
     "typescript": "^3.3.3",
     "typescript-eslint-parser": "^22.0.0"
   },
