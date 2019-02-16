@@ -25,11 +25,15 @@ commands:
       - restore_module_cache: { module_path: ./ }
       - run: yarn
       - save_module_cache: { module_path: ./ }
-      - run: yarn type-check
-      - run: yarn lint
       - run:
-        name: "Build Storybook"
-        command: yarn storybook:build
+          name: "Typecheck"
+          command: yarn type-check
+      - run:
+          name: "Lint Check"
+          command: yarn lint
+      - run:
+          name: "Build Storybook"
+          command: yarn storybook:build
       - store_artifacts:
         path: storybook-static
 jobs:
