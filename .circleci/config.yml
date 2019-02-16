@@ -27,6 +27,11 @@ commands:
       - save_module_cache: { module_path: ./ }
       - run: yarn type-check
       - run: yarn lint
+      - run:
+        name: "Build Storybook"
+        command: yarn storybook:build
+      - store_artifacts:
+        path: storybook-static
 jobs:
   test:
     docker:
