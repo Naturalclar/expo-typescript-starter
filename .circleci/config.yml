@@ -35,7 +35,7 @@ commands:
           name: "Build Storybook"
           command: yarn storybook:build
       - store_artifacts:
-        path: storybook-static
+          path: storybook-static
 jobs:
   test:
     docker:
