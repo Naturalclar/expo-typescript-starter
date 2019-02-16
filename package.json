@@ -8,8 +8,9 @@
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "lint": "eslint . --ext '.ts, .tsx'",
     "type-check": "tsc --noEmit",
+    "new": "scaffdog generate",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "new": "scaffdog generate"
+    "storybook:build": "build-storybook -c .storybook"
   },
   "jest": {
     "preset": "jest-expo"
