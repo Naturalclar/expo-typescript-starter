@@ -5,7 +5,7 @@ const octokit = require("@octokit/rest");
 const {
   CIRCLE_PULL_REQUEST,
   CIRCLE_BUILD_NUM,
-  GITHUB_TOKEN,
+  GITHUB_API_TOKEN,
   CIRCLE_CI_API_TOKEN
 } = process.env;
 
@@ -19,12 +19,14 @@ if (!CIRCLE_BUILD_NUM) {
   console.error("Cannot find build number");
   return;
 }
-if (!GITHUB_TOKEN) {
-  console.error("The environment variable GITHUB_TOKEN must be required");
+if (!GITHUB_API_TOKEN) {
+  console.error("The environment variable GITHUB_API_TOKEN must be required");
   return;
 }
 if (!CIRCLE_CI_API_TOKEN) {
-  console.error("The environment variable CIRCLE_TOKEN must be required");
+  console.error(
+    "The environment variable CIRCLE_CI_API_TOKEN must be required"
+  );
 }
 
 const segments = CIRCLE_PULL_REQUEST.split("/");
@@ -45,7 +47,7 @@ fetch(
 
     octokit.authenticate({
       type: "token",
-      token: GITHUB_TOKEN
+      token: GITHUB_API_TOKEN
     });
     return octokit.issues.createComment({
       owner: "Naturalclar",
