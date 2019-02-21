@@ -67,7 +67,6 @@
     "react-test-renderer": "^16.5.1",
     "redux-logger": "^3.0.6",
     "scaffdog": "^0.0.7",
-    "ts-loader": "^5.3.3",
     "typescript": "^3.3.3",
     "typescript-eslint-parser": "^22.0.0"
   },
