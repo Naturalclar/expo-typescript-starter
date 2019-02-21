@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+const fetch = require("node-fetch");
+const octokit = require("@octokit/rest")();
+
+const {
+  CIRCLE_PULL_REQUEST,
+  CIRCLE_BUILD_NUM,
+  GITHUB_API_TOKEN,
+  CIRCLE_CI_API_TOKEN
+} = process.env;
+
+const [targetPath, messagePrefix] = process.argv.slice(2);
+
+if (!CIRCLE_PULL_REQUEST) {
+  console.error("Cannot find pull request ID");
+  return;
+}
+if (!CIRCLE_BUILD_NUM) {
+  console.error("Cannot find build number");
+  return;
+}
+if (!GITHUB_API_TOKEN) {
+  console.error("The environment variable GITHUB_API_TOKEN must be required");
+  return;
+}
+if (!CIRCLE_CI_API_TOKEN) {
+  console.error(
+    "The environment variable CIRCLE_CI_API_TOKEN must be required"
+  );
+}
+
+const segments = CIRCLE_PULL_REQUEST.split("/");
+const pullRequestId = segments[segments.length - 1];
+
+fetch(
+  `https://circleci.com/api/v1.1/project/github/Naturalclar/expo-typescript-starter/${CIRCLE_BUILD_NUM}/artifacts?circle-token=${CIRCLE_CI_API_TOKEN}`
+)
+  .then(res => res.json())
+  .then(
+    artifacts =>
+      artifacts.filter(artifact => artifact.path.includes(targetPath))[0]
+  )
+  .then(artifact => {
+    if (!artifact) {
+      throw new Error(`Cannot find any artifacts with: ${targetPath}`);
+    }
+
+    octokit.authenticate({
+      type: "token",
+      token: GITHUB_API_TOKEN
+    });
+    return octokit.issues.createComment({
+      owner: "Naturalclar",
+      repo: "expo-typescript-starter",
+      number: pullRequestId,
+      body: `${messagePrefix}:\n${artifact.url}`
+    });
+  })
+  .then(console.log)
+  .catch(console.error);
