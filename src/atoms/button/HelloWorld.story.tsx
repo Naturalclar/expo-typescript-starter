@@ -1,7 +1,9 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Button from "./HelloWorld";
+import { View, Text } from "react-native";
 
-storiesOf("atoms", module).add("Button", () => (
-  <Button>Hello Typescript!</Button>
+storiesOf("atoms", module).add("Hello World", () => (
+  <View>
+    <Text>Hello Typescript!</Text>
+  </View>
 ));

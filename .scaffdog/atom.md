@@ -42,10 +42,19 @@ export default {{ input }}
 
 ```jsx
 import * as React from 'react';
+import {View, StyleSheet} from 'react-native';
 import { storiesOf } from '@storybook/react';
 import {{ input }} from './{{input}}'
 
+const styles = StyleSheet.create({
+  container: {
+    flex:1
+  }
+})
+
 storiesOf("atoms", module).add("{{input}}", () => (
+  <View style={styles.container}>
   <{{ input }} />
+  </View>
 ));
 ```
