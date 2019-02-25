@@ -5,10 +5,10 @@ interface Props {
   children: React.ReactChild;
 }
 
-const Button = ({ children }: Props) => (
+const HelloWorld = ({ children }: Props) => (
   <View>
     <Text>{children}</Text>
   </View>
 );
 
-export default Button;
+export default HelloWorld;
