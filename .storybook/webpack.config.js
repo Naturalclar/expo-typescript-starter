@@ -1,19 +1,6 @@
 const path = require("path");
 
 module.exports = (baseConfig, env, config) => {
-  config.module.rules.unshift({
-    test: /\.(woff|woff2|eot|ttf|svg)$/,
-    use: [
-      {
-        loader: require.resolve("file-loader"),
-        options: {
-          limit: 10000,
-          name: "static/media/[name].[hash:8].[ext]"
-        }
-      }
-    ]
-  });
-
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
