@@ -38,7 +38,7 @@ commands:
           path: storybook-static
       - run:
           name: "Report storybook URL to Pull Request"
-          command: yarn notify
+          command: 'scripts/report-artifact storybook-static/index.html "Storybookはこちらから確認できます"'
 jobs:
   test:
     docker:
