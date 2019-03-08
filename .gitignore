@@ -7,3 +7,5 @@ npm-debug.*
 *.mobileprovision
 storybook-static
 .DS_Store
+.vscode
+.cache-loader

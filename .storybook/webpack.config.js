@@ -1,20 +1,57 @@
 const path = require("path");
+const threadLoader = require("thread-loader");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+
+const jsWorkerCommonOptions = {
+  workers: 2,
+  workerParallelJobs: 50,
+  poolTimeout: Infinity,
+  poolParallelJobs: 50
+};
+
+const babelWorkerOptions = {
+  ...jsWorkerCommonOptions,
+  name: "babel-pool"
+};
+
+const tsWorkerOptions = {
+  ...jsWorkerCommonOptions,
+  name: "ts-pool"
+};
 
 module.exports = (baseConfig, env, config) => {
+  threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
+  threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
+
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
     use: [
+      { loader: "cache-loader" },
+      { loader: "thread-loader", options: tsWorkerOptions },
       {
-        loader: require.resolve("ts-loader")
+        loader: "ts-loader",
+        options: {
+          experimentalWatchApi: true,
+          transpileOnly: true,
+          happyPackMode: true
+        }
       }
     ]
   });
+
+  // type-checking
+  config.plugins.push(
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true })
+  );
+
   config.module.rules.push({
     test: /\.jsx?$/,
     use: [
+      { loader: "cache-loader" },
+      { loader: "thread-loader", options: babelWorkerOptions },
       {
-        loader: require.resolve("babel-loader"),
+        loader: "babel-loader?cacheDirectory?true",
         options: {
           presets: ["module:metro-react-native-babel-preset"]
         }

@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit",
     "new": "scaffdog generate",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook"
+    "storybook:build": "build-storybook -c .storybook",
+    "notify": "node artifact-pr-notify"
   },
   "jest": {
     "preset": "jest-expo"
@@ -48,7 +49,9 @@
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-knobs": "^4.0.0",
     "@types/storybook__react": "^4.0.0",
+    "artifact-pr-notify": "^1.0.0",
     "babel-preset-expo": "^5.0.0",
+    "cache-loader": "^2.0.1",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
@@ -57,6 +60,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-typescript": "^0.14.0",
+    "fork-ts-checker-webpack-plugin": "^1.0.0",
     "jest-expo": "^32.0.0",
     "metro-react-native-babel-preset": "^0.52.0",
     "node-fetch": "^2.3.0",
@@ -68,6 +72,7 @@
     "react-test-renderer": "^16.5.1",
     "redux-logger": "^3.0.6",
     "scaffdog": "^0.0.7",
+    "thread-loader": "^2.1.2",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3",
     "typescript-eslint-parser": "^22.0.0"
