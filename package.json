@@ -11,7 +11,7 @@
     "new": "scaffdog generate",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook",
-    "notify": "node artifact-pr-notify"
+    "notify": "artifact-notify storybook-static"
   },
   "jest": {
     "preset": "jest-expo"
@@ -49,7 +49,7 @@
     "@types/storybook__addon-actions": "^3.4.1",
     "@types/storybook__addon-knobs": "^4.0.0",
     "@types/storybook__react": "^4.0.0",
-    "artifact-pr-notify": "^1.0.0",
+    "artifact-pr-notify": "^1.0.2",
     "babel-preset-expo": "^5.0.0",
     "cache-loader": "^2.0.1",
     "eslint": "^5.13.0",
