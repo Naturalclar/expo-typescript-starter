@@ -20,7 +20,7 @@ interface Props {
 }
 
 export default class App extends React.Component<Props> {
-  private state = {
+  public state = {
     isLoadingComplete: false
   };
 
@@ -36,17 +36,17 @@ export default class App extends React.Component<Props> {
     ]);
   };
 
-  private handleLoadingError = (error: Error) => {
+  public handleLoadingError = (error: Error) => {
     // In this case, you might want to report the error to your error
     // reporting service, for example Sentry
     console.warn(error);
   };
 
-  private handleFinishLoading = () => {
+  public handleFinishLoading = () => {
     this.setState({ isLoadingComplete: true });
   };
 
-  private render(): JSX.Element {
+  public render(): JSX.Element {
     const { isLoadingComplete } = this.state;
     const { skipLoadingScreen } = this.props;
     if (!isLoadingComplete && !skipLoadingScreen) {
