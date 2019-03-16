@@ -9,7 +9,6 @@ commands:
       - restore_cache:
           keys:
             - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/yarn.lock" }}
-         
   save_module_cache:
     parameters:
       module_path:
@@ -26,7 +25,7 @@ commands:
     steps:
       - restore_cache:
           keys:
-        - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
+            - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
   save_story_cache:
     parameters:
       module_path:
