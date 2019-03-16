@@ -20,11 +20,11 @@ interface Props {
 }
 
 export default class App extends React.Component<Props> {
-  state = {
+  public state = {
     isLoadingComplete: false
   };
 
-  loadResourcesAsync = async () => {
+  public loadResourcesAsync = async () => {
     return Promise.all([
       Asset.loadAsync([RobotDev, RobotProd]),
       Font.loadAsync({
@@ -36,17 +36,17 @@ export default class App extends React.Component<Props> {
     ]);
   };
 
-  handleLoadingError = (error: Error) => {
+  public handleLoadingError = (error: Error) => {
     // In this case, you might want to report the error to your error
     // reporting service, for example Sentry
     console.warn(error);
   };
 
-  handleFinishLoading = () => {
+  public handleFinishLoading = () => {
     this.setState({ isLoadingComplete: true });
   };
 
-  render() {
+  public render(): JSX.Element {
     const { isLoadingComplete } = this.state;
     const { skipLoadingScreen } = this.props;
     if (!isLoadingComplete && !skipLoadingScreen) {

@@ -1,7 +1,12 @@
 module.exports = {
-  parser: "typescript-eslint-parser",
-  extends: ["airbnb", "plugin:prettier/recommended"],
-  plugins: ["react", "typescript"],
+  parser: "@typescript-eslint/parser",
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  plugins: ["react", "@typescript-eslint"],
   globals: {
     __DEV__: true
   },
@@ -12,7 +17,7 @@ module.exports = {
     "react/jsx-filename-extension": [2, { extensions: [".tsx", ".ts"] }],
     // use custom non-unused-vars for typescript
     "no-unused-vars": "off",
-    "typescript/no-unused-vars": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error"],
     "import/no-extraneous-dependencies": [
       "error",
       {

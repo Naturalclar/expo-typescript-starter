@@ -9,8 +9,8 @@ interface Props {
   ) => void;
 }
 
-const MyPageScreen = ({ showActionSheetWithOptions }: Props) => {
-  const onOpenActionSheet = () => {
+const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
+  const onOpenActionSheet = (): void => {
     const options = ["Foo", "Bar", "Cancel"];
     const okButtonIndex = 0;
     const destructionButtonIndex = 1;
@@ -35,6 +35,7 @@ const MyPageScreen = ({ showActionSheetWithOptions }: Props) => {
       }
     );
   };
+
   return (
     <View>
       <TouchableOpacity onPress={onOpenActionSheet}>
