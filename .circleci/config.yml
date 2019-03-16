@@ -18,11 +18,29 @@ commands:
           key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/yarn.lock" }}
           paths:
             - << parameters.module_path >>/node_modules
+  restore_story_cache:
+    parameters:
+      module_path:
+        type: string
+    steps:
+      - restore_cache:
+          keys:
+            - v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
+  save_story_cache:
+    parameters:
+      module_path:
+        type: string
+    steps:
+      - save_cache:
+          key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
+          paths:
+            - << parameters.module_path >>/.cache-loader
 
   setup_and_test:
     steps:
       - checkout
       - restore_module_cache: { module_path: ./ }
+      - restore_story_cache: { module_path: ./ }
       - run: yarn
       - save_module_cache: { module_path: ./ }
       - run:
@@ -34,11 +52,12 @@ commands:
       - run:
           name: "Build Storybook"
           command: yarn storybook:build
+      - save_story_cache: { module_path: ./ }
       - store_artifacts:
           path: storybook-static
       - run:
           name: "Report storybook URL to Pull Request"
-          command: 'scripts/report-artifact storybook-static/index.html "Storybookはこちらから確認できます"'
+          command: yarn notify
 jobs:
   test:
     docker:
