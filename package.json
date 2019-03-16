@@ -51,7 +51,7 @@
     "@types/storybook__react": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
-    "artifact-pr-notify": "^1.0.2",
+    "artifact-pr-notify": "^1.0.3",
     "babel-preset-expo": "^5.0.0",
     "cache-loader": "^2.0.1",
     "eslint": "^5.13.0",
