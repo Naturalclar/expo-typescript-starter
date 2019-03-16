@@ -5,7 +5,6 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const jsWorkerCommonOptions = {
   workers: 2,
   workerParallelJobs: 50,
-  poolTimeout: Infinity,
   poolParallelJobs: 50
 };
 
@@ -20,9 +19,10 @@ const tsWorkerOptions = {
 };
 
 module.exports = (baseConfig, env, config) => {
-  threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
-  threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
-
+  if (env !== "PRODUCTION") {
+    threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
+    threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
+  }
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
