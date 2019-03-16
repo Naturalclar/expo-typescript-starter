@@ -34,7 +34,7 @@ commands:
       - save_cache:
           key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
           paths:
-            - << parameters.cache_path >>/.cache-loader
+            - << parameters.module_path >>/.cache-loader
 
   setup_and_test:
     steps:
