@@ -11,7 +11,7 @@
     "new": "scaffdog generate",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook",
-    "notify": "artifact-notify storybook-static/index.html"
+    "klank": "klank storybook-static/index.html"
   },
   "jest": {
     "preset": "jest-expo"
@@ -20,6 +20,7 @@
     "@expo/react-native-action-sheet": "^2.1.0",
     "@expo/samples": "2.1.1",
     "expo": "^32.0.0",
+    "klank": "^0.0.1",
     "react": "16.5.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-navigation": "^3.0.9",
@@ -51,7 +52,6 @@
     "@types/storybook__react": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
-    "artifact-pr-notify": "^1.0.3",
     "babel-preset-expo": "^5.0.0",
     "cache-loader": "^2.0.1",
     "eslint": "^5.13.0",
