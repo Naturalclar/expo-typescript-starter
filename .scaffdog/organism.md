@@ -13,7 +13,7 @@ ignore: []
 import React, {Dispatch} from 'react'
 import { View, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import { RootState, ThunkAction } from "../../types";
+
 
 const styles = StyleSheet.create({
   container: {
@@ -23,32 +23,11 @@ const styles = StyleSheet.create({
 
 interface Props {}
 
-export const {{ input }} = ({}: Props) => (
+const {{ input }}:React.FC<Props> = ({}: Props): JSX.Element => (
 <View style={styles.container}></View>
 )
 
-export class {{ input }} extends React.Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-      </View>
-    )
-  }
-}
-
-const StateToProps = (state: RootState) => {
-  return {
-
-  }
-}
-
-const DispatchToProps = (dispatch: Dispatch<ThunkAction>) => {
-  return {
-
-  }
-}
-
-export default connect(StateToProps,DispatchToProps)({{ input }})
+export default {{ input }}
 
 ```
 
