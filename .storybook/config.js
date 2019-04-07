@@ -17,5 +17,5 @@ addDecorator(
 
 configure(loadStories, module);
 configureViewport({
-  defaultViewport: "iphone6p"
+  defaultViewport: "iphone5"
 });

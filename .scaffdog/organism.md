@@ -10,8 +10,10 @@ ignore: []
 # `{{ input }}.tsx`
 
 ```jsx
-import * as React from 'react'
+import React, {Dispatch} from 'react'
 import { View, StyleSheet } from 'react-native'
+import { connect } from 'react-redux'
+import { RootState, ThunkAction } from "../../types";
 
 const styles = StyleSheet.create({
   container: {
@@ -21,11 +23,11 @@ const styles = StyleSheet.create({
 
 interface Props {}
 
-const {{ input }} = ({}: Props) => (
+export const {{ input }} = ({}: Props) => (
 <View style={styles.container}></View>
 )
 
-class {{ input }} extends React.Component<Props> {
+export class {{ input }} extends React.Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -34,7 +36,19 @@ class {{ input }} extends React.Component<Props> {
   }
 }
 
-export default {{ input }}
+const StateToProps = (state: RootState) => {
+  return {
+
+  }
+}
+
+const DispatchToProps = (dispatch: Dispatch<ThunkAction>) => {
+  return {
+
+  }
+}
+
+export default connect(StateToProps,DispatchToProps)({{ input }})
 
 ```
 
@@ -42,10 +56,31 @@ export default {{ input }}
 
 ```jsx
 import * as React from 'react';
+import {View ,StyleSheet} from 'react-native'
 import { storiesOf } from '@storybook/react';
-import {{ input }} from './{{input}}'
+import { {{ input }} } from './{{input}}'
 
-storiesOf("organisms", module).add("{{input}}", () => (
+const styles = StyleSheet.create ({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor:'dodgerBlue'
+  },
+  component: {
+    backgroundColor: 'white',
+  },
+})
+
+storiesOf("organisms", module)
+  .addDecorator(story => (
+    <View style={styles.container}>
+      <View style={styles.component}>{story()}</View>
+      <Text>
+        Componentが見やすい様にPaddingが敷かれています。この部分は端末には表示されません。
+      </Text>
+    </View>
+  )).add("{{input}}", () => (
   <{{ input }} />
 ));
+
 ```
