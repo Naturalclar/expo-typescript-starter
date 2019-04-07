@@ -56,7 +56,7 @@ export default connect(StateToProps,DispatchToProps)({{ input }})
 
 ```jsx
 import * as React from 'react';
-import {View ,StyleSheet} from 'react-native'
+import {View , Text, StyleSheet} from 'react-native'
 import { storiesOf } from '@storybook/react';
 import { {{ input }} } from './{{input}}'
 
@@ -64,7 +64,7 @@ const styles = StyleSheet.create ({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor:'dodgerBlue'
+    backgroundColor:'dodgerblue'
   },
   component: {
     backgroundColor: 'white',

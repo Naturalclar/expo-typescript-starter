@@ -34,14 +34,14 @@ export default {{ input }}
 ```jsx
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { View, ,Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import {{ input }} from './{{input}}';
 
 const styles = StyleSheet.create ({
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor:'dodgerBlue'
+    backgroundColor:'dodgerblue'
   },
   component: {
     backgroundColor: 'white',
