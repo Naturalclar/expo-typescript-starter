@@ -9,8 +9,8 @@
     "lint": "eslint . --ext '.ts, .tsx'",
     "type-check": "tsc --noEmit",
     "new": "scaffdog generate",
-    "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
+    "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
     "klank": "klank storybook-static/index.html"
   },
   "jest": {
