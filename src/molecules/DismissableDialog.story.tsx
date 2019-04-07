@@ -20,10 +20,10 @@ storiesOf("molecules", module)
   ))
   .add("DismissableDialog", () => (
     <DismissableDialog
-      title="症例投稿のガイドライン"
-      body="１Dに画像を投稿する時は、利用規約をよくお読みの上、以下の点にご注意ください"
+      title={text("title", "Dialog Title")}
+      body={text("body", "DialogBody")}
       onPressOk={action("onPressOk")}
       onRequestClose={action("onRequestClose")}
-      buttonText={text("buttonText", "同意してシェア")}
+      buttonText={text("buttonText", "Ok")}
     />
   ));

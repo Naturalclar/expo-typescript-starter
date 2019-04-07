@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
   container: {
     padding: 24,
     borderRadius: 10,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    width: "100%"
   },
   main: {
     flex: 1,
@@ -66,13 +67,13 @@ const DismissableDialog: React.FC<Props> = ({
         </View>
         <View style={styles.checkList}>
           <IconText icon="check" iconColor="#4080FD">
-            個人情報が含まれてない
+            Check 1
           </IconText>
           <IconText icon="check" iconColor="#4080FD">
-            患者さんからの同意がある
+            Check 2
           </IconText>
           <IconText icon="check" iconColor="#4080FD">
-            著作権等の権利を侵害していない
+            Check 3
           </IconText>
         </View>
         <RoundButton color="#4080FD" label={buttonText} onPress={onPressOk} />
