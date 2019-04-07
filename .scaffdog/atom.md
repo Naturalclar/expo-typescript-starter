@@ -44,6 +44,7 @@ const styles = StyleSheet.create ({
     backgroundColor:'dodgerblue'
   },
   component: {
+    flex:1,
     backgroundColor: 'white',
   },
 })
