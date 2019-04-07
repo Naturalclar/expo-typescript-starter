@@ -47,6 +47,13 @@ module.exports = (baseConfig, env, config) => {
 
   config.module.rules.push({
     test: /\.jsx?$/,
+    include: [
+      path.resolve(__dirname, "../node_modules/react-native-elements"),
+      path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
+      path.resolve(__dirname, "../node_modules/@expo/vector-icons"),
+      path.resolve(__dirname, "../node_modules/react-native-ratings"),
+      path.resolve(__dirname, "../node_modules/react-native-status-bar-height")
+    ],
     use: [
       { loader: "cache-loader" },
       { loader: "thread-loader", options: babelWorkerOptions },
