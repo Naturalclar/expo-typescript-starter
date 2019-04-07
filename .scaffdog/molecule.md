@@ -25,15 +25,6 @@ const {{ input }} = ({}: Props) => (
 <View style={styles.container}></View>
 )
 
-class {{ input }} extends React.Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-      </View>
-    )
-  }
-}
-
 export default {{ input }}
 
 ```
@@ -43,9 +34,29 @@ export default {{ input }}
 ```jsx
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
+import { View, ,Text, StyleSheet } from 'react-native';
 import {{ input }} from './{{input}}'
 
-storiesOf("molecules", module).add("{{input}}", () => (
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+    backgroundColor:'dodgerBlue'
+  },
+  component: {
+    backgroundColor: 'white',
+  },
+})
+
+storiesOf("molecules", module)
+  .addDecorator(story => (
+    <View style={styles.container}>
+      <View style={styles.component}>{story()}</View>
+      <Text>
+        Componentが見やすい様にPaddingが敷かれています。この部分は端末には表示されません。
+      </Text>
+    </View>
+  )).add("{{input}}", () => (
   <{{ input }} />
 ));
 ```
