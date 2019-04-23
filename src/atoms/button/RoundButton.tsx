@@ -4,8 +4,8 @@ import { Text, StyleSheet, TouchableOpacity } from "react-native";
 const styles = StyleSheet.create({
   container: {
     borderRadius: 50,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
+    paddingVertical: 100,
+    paddingHorizontal: 150,
     justifyContent: "center",
     alignItems: "center"
   },
@@ -23,7 +23,7 @@ interface Props {
 const RoundButton: React.FC<Props> = ({
   onPress,
   label,
-  color = "dodgerblue"
+  color = "red"
 }: Props): JSX.Element => (
   <TouchableOpacity
     style={[styles.container, { backgroundColor: color }]}
