@@ -3,7 +3,7 @@ import { Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 100,
+    borderRadius: 50,
     paddingVertical: 8,
     paddingHorizontal: 12,
     justifyContent: "center",
