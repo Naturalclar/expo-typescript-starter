@@ -1,5 +1,7 @@
 # expo-typescript-starter
 
+[![CircleCI](https://circleci.com/gh/Naturalclar/expo-typescript-starter.svg?style=shield)](https://circleci.com/gh/Naturalclar/expo-typescript-starter)
+
 This is a boilerplate for [expo]() project with [typescript]() integration.
 
 ## Tech Stack
