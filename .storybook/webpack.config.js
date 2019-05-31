@@ -48,7 +48,9 @@ module.exports = (baseConfig, env, config) => {
   config.module.rules.push({
     test: /\.jsx?$/,
     include: [
+      path.resolve(__dirname, "../node_modules/react-native-paper"),
       path.resolve(__dirname, "../node_modules/react-native-elements"),
+      path.resolve(__dirname, "../node_modules/react-native-safe-area-view"),
       path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
       path.resolve(__dirname, "../node_modules/@expo/vector-icons"),
       path.resolve(__dirname, "../node_modules/react-native-ratings"),
@@ -60,7 +62,10 @@ module.exports = (baseConfig, env, config) => {
       {
         loader: "babel-loader?cacheDirectory?true",
         options: {
-          presets: ["module:metro-react-native-babel-preset"]
+          presets: [
+            "module:metro-react-native-babel-preset",
+            "@babel/preset-flow"
+          ]
         }
       }
     ]

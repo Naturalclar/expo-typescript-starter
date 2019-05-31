@@ -21,18 +21,9 @@ const styles = StyleSheet.create({
 
 interface Props {}
 
-const {{ input }} = ({}: Props) => (
+const {{ input }}: React.FC<Props> = ({}: Props):JSX.Element => (
 <View style={styles.container}></View>
 )
-
-class {{ input }} extends React.Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-      </View>
-    )
-  }
-}
 
 export default {{ input }}
 
