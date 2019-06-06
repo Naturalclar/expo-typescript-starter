@@ -1,6 +1,9 @@
 import * as React from "react";
 import { Platform, StatusBar, StyleSheet, View } from "react-native";
-import { AppLoading, Asset, Font, Icon } from "expo";
+import { AppLoading } from "expo";
+import { Asset } from "expo-asset";
+import * as Font from "expo-font";
+import * as Icon from "@expo/vector-icons";
 import { Provider } from "react-redux";
 import { ActionSheetProvider } from "@expo/react-native-action-sheet";
 import { PersistGate } from "redux-persist/integration/react";
