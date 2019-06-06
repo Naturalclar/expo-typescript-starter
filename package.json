@@ -21,6 +21,8 @@
     "@expo/samples": "2.1.1",
     "@expo/vector-icons": "^10.0.1",
     "expo": "^33.0.3",
+    "expo-asset": "^5.0.1",
+    "expo-font": "^5.0.1",
     "klank": "^0.0.1",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
