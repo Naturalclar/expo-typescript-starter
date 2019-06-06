@@ -14,6 +14,11 @@ This is a boilerplate for [expo]() project with [typescript]() integration.
 - [prettier](https://prettier.io/)
 - [klank](https://github.com/Naturalclar/klank)
 
+## Component Libraries
+
+- [React-Native-Elements](https://react-native-training.github.io/react-native-elements/)
+- [React-Native-Paper](https://reactnativepaper.com/)
+
 ## Getting started
 
 ### Clone the repository
