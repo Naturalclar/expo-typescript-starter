@@ -1,5 +1,4 @@
-import { configure, addDecorator } from "@storybook/react";
-import { configureViewport } from "@storybook/addon-viewport";
+import { configure, addDecorator, addParameters } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
 import { withKnobs } from "@storybook/addon-knobs";
 
@@ -15,7 +14,10 @@ addDecorator(
   })
 );
 
-configure(loadStories, module);
-configureViewport({
-  defaultViewport: "iphone5"
+addParameters({
+  viewport: {
+    defaultViewport: "iphone5"
+  }
 });
+
+configure(loadStories, module);
