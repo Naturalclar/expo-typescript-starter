@@ -18,8 +18,8 @@ const tsWorkerOptions = {
   name: "ts-pool"
 };
 
-module.exports = (baseConfig, env, config) => {
-  if (env !== "PRODUCTION") {
+module.exports = ({ config, mode }) => {
+  if (mode !== "PRODUCTION") {
     threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
     threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
   }
