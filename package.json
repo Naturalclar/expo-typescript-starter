@@ -23,7 +23,7 @@
     "expo": "^33.0.3",
     "expo-asset": "^5.0.1",
     "expo-font": "^5.0.1",
-    "klank": "^0.0.1",
+    "klank": "^0.0.5",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
     "react-native-paper": "^2.15.2",
