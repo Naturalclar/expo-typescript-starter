@@ -9,6 +9,7 @@
     "lint": "eslint . --ext '.ts, .tsx'",
     "new": "scaffdog generate",
     "now-build": "yarn storybook:build",
+    "prepare": "yarn storybook:build",
     "start": "expo start",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
