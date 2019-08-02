@@ -4,6 +4,8 @@
 
 This is a boilerplate for [expo]() project with [typescript]() integration.
 
+Storybook can be viewed [here](https://expo-storybook-web-example.naturalclar.now.sh)
+
 ## Tech Stack
 
 - [Expo](https://expo.io/) ([React-Native](https://facebook.github.io/react-native/))
