@@ -1,17 +1,19 @@
 {
+  "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "ios": "expo start --ios",
+    "klank": "klank storybook-static/index.html",
     "lint": "eslint . --ext '.ts, .tsx'",
-    "type-check": "tsc --noEmit",
     "new": "scaffdog generate",
+    "build": "yarn storybook:build",
+    "start": "expo start",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
-    "klank": "klank storybook-static/index.html"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "type-check": "tsc --noEmit"
   },
   "jest": {
     "preset": "jest-expo"
@@ -72,6 +74,7 @@
     "jest-expo": "^33.0.2",
     "metro-react-native-babel-preset": "^0.52.0",
     "node-fetch": "^2.3.0",
+    "now": "^15.8.7",
     "prettier": "^1.16.4",
     "react-art": "16.8.3",
     "react-dom": "16.8.3",
@@ -84,6 +87,5 @@
     "thread-loader": "^2.1.2",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3"
-  },
-  "private": true
+  }
 }
