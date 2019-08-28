@@ -25,5 +25,3 @@ jobs:
         with:
           name: Storybook
           path: storybook-static
-    env:
-      CI: true
