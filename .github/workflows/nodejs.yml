@@ -1,0 +1,30 @@
+name: Storybook Preview
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Dependencies
+      run: npm install
+    - name: Build Storybook
+      run: npm run storybook:build
+    - name: Upload Storybook
+      uses: actions/upload-artifact@master
+      with:
+        name: Storybook
+        path: storybook-static
+    env:
+      CI: true
