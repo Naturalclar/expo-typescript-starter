@@ -14,6 +14,7 @@
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "type-check": "tsc --noEmit",
+    "reg-suit": "reg-suit run",
     "zisui:all": "rm -rf ./__screenshots__ && yarn zisui --serverCmd 'yarn storybook --ci' --viewport '414x736' --serverTimeout '200000'"
   },
   "jest": {
