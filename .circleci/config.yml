@@ -35,29 +35,60 @@ commands:
           key: v{{ .Environment.CIRCLECI_CACHE_VERSION }}-dependencies-<< parameters.module_path >>-{{ checksum "<< parameters.module_path >>/.cache-loader" }}
           paths:
             - << parameters.module_path >>/.cache-loader
+  install_fonts:
+    steps:
+      - run:
+          name: Prepare Japanese fonts
+          command: |
+            mkdir /tmp/fonts
+            cd /tmp/fonts
+            wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip
+            unzip NotoSansCJKjp-hinted.zip
+            mkdir -p ~/.fonts
+            cp *otf ~/.fonts
+            fc-cache -f -v
+            fc-match --all
+  type_check:
+    steps:
+      - run:
+          name: "Typecheck"
+          command: yarn type-check
+  lint:
+    steps:
+      - run:
+          name: "Lint Check"
+          command: yarn lint
+  build_storybook:
+    steps:
+      - run:
+          name: "Build Storybook"
+          command: yarn storybook:build
+  visreg_test:
+    steps:
+      - run:
+          name: "Run Visual-Regression test"
+          command: |
+            yarn zisui:all
+            yarn reg-suit
 
   setup_and_test:
     steps:
       - checkout
+      - install_fonts
       - restore_module_cache: { module_path: ./ }
       - restore_story_cache: { module_path: ./ }
       - run: yarn
       - save_module_cache: { module_path: ./ }
-      - run:
-          name: "Typecheck"
-          command: yarn type-check
-      - run:
-          name: "Lint Check"
-          command: yarn lint
-      - run:
-          name: "Build Storybook"
-          command: yarn storybook:build
+      - type_check
+      - lint
+      - build_storybook
       - save_story_cache: { module_path: ./ }
       - store_artifacts:
           path: storybook-static
       - run:
           name: "Report storybook URL to Pull Request"
           command: yarn klank
+      - visreg_test
 jobs:
   test:
     docker:
