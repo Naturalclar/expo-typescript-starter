@@ -11,3 +11,4 @@ storybook-static
 .cache-loader
 .reg
 __screenshots__
+public
