@@ -8,7 +8,7 @@
     "klank": "klank storybook-static/index.html",
     "lint": "eslint . --ext '.ts, .tsx'",
     "new": "scaffdog generate",
-    "build": "yarn storybook:build",
+    "build": "yarn storybook:build -o public",
     "start": "expo start",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
