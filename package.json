@@ -13,7 +13,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "zisui:all": "rm -rf ./__screenshots__ && yarn zisui --serverCmd 'yarn storybook --ci' --viewport '414x736' --serverTimeout '200000'"
   },
   "jest": {
     "preset": "jest-expo"
@@ -83,9 +84,14 @@
     "react-native-web": "^0.10.0",
     "react-test-renderer": "^16.8.3",
     "redux-logger": "^3.0.6",
+    "reg-keygen-git-hash-plugin": "^0.7.25",
+    "reg-notify-github-plugin": "^0.7.25",
+    "reg-publish-s3-plugin": "^0.7.25",
+    "reg-suit": "^0.7.25",
     "scaffdog": "^0.0.7",
     "thread-loader": "^2.1.2",
     "ts-loader": "^5.3.3",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "zisui": "^1.3.4"
   }
 }

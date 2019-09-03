@@ -9,3 +9,5 @@ storybook-static
 .DS_Store
 .vscode
 .cache-loader
+.reg
+__screenshots__
