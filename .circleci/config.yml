@@ -92,7 +92,7 @@ commands:
 jobs:
   test:
     docker:
-      - image: circleci/node:8.11.3
+      - image: circleci/node:dubnium-browsers
     working_directory: ~/app
     steps:
       - setup_and_test
