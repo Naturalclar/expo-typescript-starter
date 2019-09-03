@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     backgroundColor: "aliceblue"
   },
   component: {
+    flex: 1,
     backgroundColor: "white"
   }
 });
