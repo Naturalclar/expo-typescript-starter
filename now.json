@@ -1,6 +1,6 @@
 {
   "version": 2,
   "project": "expo-storybook-web-example",
-  "builds": [{ "src": "storybook-static/**", "use": "@now/static" }],
+  "builds": [{ "src": "storybook-static/**", "use": "@now/static-build" }],
   "routes": [{ "src": "/(.*)", "dest": "storybook-static/$1" }]
 }
