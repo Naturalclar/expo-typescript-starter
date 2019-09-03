@@ -1,20 +1,25 @@
 {
-  "private": true,
+  "name": "expo-typescript-starter",
+  "version": "0.1.0",
+  "description": "Template for expo project with TS, Storybook, Reg-Suit",
+  "repository": "https://github.com/Naturalclar/expo-typescript-starter.git",
+  "license": "MIT",
+  "author": "Jesse Katsumata <jesse.katsumata@gmail.com>",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "android": "expo start --android",
+    "build": "yarn storybook:build -o public",
     "eject": "expo eject",
     "ios": "expo start --ios",
     "klank": "klank storybook-static/index.html",
     "lint": "eslint . --ext '.ts, .tsx'",
     "new": "scaffdog generate",
-    "build": "yarn storybook:build -o public",
+    "reg-suit": "reg-suit run",
     "start": "expo start",
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "type-check": "tsc --noEmit",
-    "reg-suit": "reg-suit run",
     "zisui:all": "rm -rf ./__screenshots__ && yarn zisui --serverCmd 'yarn storybook --ci' --viewport '414x736' --serverTimeout '200000'"
   },
   "jest": {
