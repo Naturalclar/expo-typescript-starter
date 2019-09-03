@@ -1,5 +1,10 @@
 {
   "version": 2,
   "project": "expo-storybook-web-example",
-  "builds": [{ "use": "@now/static-build" }]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ]
 }
