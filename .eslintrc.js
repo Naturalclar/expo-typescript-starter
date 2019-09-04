@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     "import/prefer-default-export": [0],
     "@typescript-eslint/explicit-function-return-type": [0],
+    "@typescript-eslint/prefer-interface": [0],
     "react/jsx-filename-extension": [2, { extensions: [".tsx", ".ts"] }],
     // use custom non-unused-vars for typescript
     "no-unused-vars": "off",
