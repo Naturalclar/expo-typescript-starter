@@ -10,7 +10,7 @@ ignore: []
 # `{{ input }}.tsx`
 
 ```jsx
-import * as React from 'react'
+import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   }
 })
 
-interface Props {}
+type Props = {}
 
 const {{ input }}: React.FC<Props> = ({}: Props):JSX.Element => (
 <View style={styles.container}></View>
@@ -32,11 +32,10 @@ export default {{ input }}
 # `{{ input }}.story.tsx`
 
 ```jsx
-import * as React from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import {{ input }} from './{{input}}'
 
-storiesOf("templates", module).add("{{input}}", () => (
-  <{{ input }} />
-));
+storiesOf("templates", module)
+  .add("{{input}}", () =>  <{{ input }} />);
 ```
