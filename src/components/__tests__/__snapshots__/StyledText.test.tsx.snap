@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   style={
     Array [
       undefined,
-      Object {
-        "fontFamily": "space-mono",
-      },
     ]
   }
 >
