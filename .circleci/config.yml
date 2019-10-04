@@ -75,14 +75,8 @@ commands:
     steps:
       - checkout
       - install_fonts
-      - restore_module_cache: { module_path: ./ }
-      - restore_story_cache: { module_path: ./ }
       - run: yarn
-      - save_module_cache: { module_path: ./ }
-      - type_check
-      - lint
       - build_storybook
-      - save_story_cache: { module_path: ./ }
       - store_artifacts:
           path: storybook-static
       - run:
