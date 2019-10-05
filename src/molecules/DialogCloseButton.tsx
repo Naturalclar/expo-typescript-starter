@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 16,
     right: 16,
-    zindex: 2
+    zIndex: 2
   }
 });
 
