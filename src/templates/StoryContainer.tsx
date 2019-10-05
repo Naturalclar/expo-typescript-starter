@@ -1,6 +1,4 @@
 import * as React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { RenderFunction } from "@storybook/react";
 import { StyleSheet, View, Text } from "react-native";
 
 const styles = StyleSheet.create({
@@ -15,7 +13,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export const StorybookContainer = (story: RenderFunction) => (
+export const StorybookContainer = (story: any) => (
   <View style={styles.container}>
     <View style={styles.component}>{story()}</View>
     <Text>Padding is here for clarity when displaying on storybook.</Text>
