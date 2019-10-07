@@ -1,0 +1,13 @@
+{
+    "login": {
+        "welcome": "Bem vindo {{name}} para o nosso aplicativo localizado!",
+        "login_button": "Conecte-se",
+        "signup_button": "Cadastre-se"
+    },
+    "user_profile": {
+        "title": "Seu perfil"
+    },
+    "form": {
+        "submit": "Enviar"
+    }
+}
