@@ -1,10 +1,13 @@
 {
   "name": "expo-typescript-starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Template for expo project with TS, Storybook, Reg-Suit",
   "repository": "https://github.com/Naturalclar/expo-typescript-starter.git",
   "license": "MIT",
   "author": "Jesse Katsumata <jesse.katsumata@gmail.com>",
+  "contributors": [
+    "Willian Ribeiro Angelo <agfoccus@gmail.com>"
+  ],
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "android": "expo start --android",
@@ -45,6 +48,7 @@
     "react-native-gesture-handler": "1.4.1",
     "react-native-paper": "2.16.0",
     "react-navigation": "4.0.10",
+    "react-navigation-hooks": "^1.1.0",
     "react-navigation-redux-helpers": "4.0.1",
     "react-redux": "7.1.1",
     "redux": "4.0.4",
@@ -52,6 +56,7 @@
     "redux-observable": "1.2.0",
     "redux-persist": "6.0.0",
     "shortid": "2.2.15",
+    "storybook-styled-components": "^1.1.4",
     "styled-components": "5.0.0-beta.9"
   },
   "devDependencies": {
@@ -104,7 +109,8 @@
     "reg-notify-github-plugin": "0.7.26",
     "reg-publish-s3-plugin": "0.7.25",
     "reg-suit": "0.8.1",
-    "scaffdog": "0.1.2",
+    "scaffdog": "^0.0.7",
+    "storybook-addon-i18next": "^1.2.1",
     "storybook-addon-styled-component-theme": "1.2.5",
     "thread-loader": "2.1.3",
     "ts-jest": "24.1.0",

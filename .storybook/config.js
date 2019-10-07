@@ -1,14 +1,14 @@
 import { configure, addDecorator, addParameters } from "@storybook/react"
 import { setOptions } from "@storybook/addon-options"
 import { withKnobs } from "@storybook/addon-knobs"
-import { withThemesProvider } from 'storybook-addon-styled-component-theme'
-import { themes } from '../src/theme'
+import { withI18next } from 'storybook-addon-i18next'
+import i18n from 'i18next'
 import '../src/locales'
+
 const App = require('../app.json')
 
 setOptions({
   name: App.name,
-  url: 'https://necolas.github.io/react-native-web',
   goFullScreen: false,
   addonPanelInRight: false,
   showSearchBox: false,
@@ -22,7 +22,17 @@ addParameters({
   }
 })
 
-addDecorator(withThemesProvider(themes))
+
+addDecorator(
+  withI18next({
+    i18n,
+    languages: {
+      en: 'English',
+      'pt': 'Português',
+    },
+  })
+)
+
 
 addDecorator(withKnobs({ escapeHTML: false }))
 

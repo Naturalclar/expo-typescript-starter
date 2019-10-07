@@ -1,4 +1,8 @@
 {
+    "closeApp": {
+        "title": "Fechar aplicativo",
+        "message": "Tem certeza que deseja sair?"
+    },
     "login": {
         "welcome": "Bem vindo {{name}} para o nosso aplicativo localizado!",
         "login_button": "Conecte-se",
@@ -8,6 +12,13 @@
         "title": "Seu perfil"
     },
     "form": {
-        "submit": "Enviar"
-    }
+        "email": "E-mail",
+        "password": "Senha",
+        "submit": "Enviar",
+        "facebook": "Entrar usando Facebook"
+    },
+    "yes": "Sim",
+    "no": "Não",
+    "cancel": "Cancelar"
+
 }

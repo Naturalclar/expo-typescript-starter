@@ -23,6 +23,10 @@ module.exports = ({ config, mode }) => {
     threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
     threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
   }
+
+  // module resolver
+  config.resolve.modules = ["node_modules", path.resolve(__dirname, "../src")];
+
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
@@ -80,5 +84,6 @@ module.exports = ({ config, mode }) => {
 
   // .ts, .tsx を含めるように追加
   config.resolve.extensions.push(".ts", ".tsx");
+
   return config;
 };

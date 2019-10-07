@@ -1,18 +1,73 @@
-import { createStore, applyMiddleware } from "redux";
-import { persistStore } from "redux-persist";
-import thunk from "redux-thunk";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import reduxLogger from "redux-logger";
-import reducer from "../reducer";
+import { AsyncStorage } from 'react-native'
+import { applyMiddleware, createStore, StoreCreator } from 'redux'
+import { createEpicMiddleware } from 'redux-observable'
+import { persistReducer, persistStore } from 'redux-persist'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { routerMiddleware } from './navigator'
+import rootEpic from './rootEpic'
+import rootReducer from './reducers'
 
-// development なら redux-loggerを入れる
-const logger = __DEV__ ? [reduxLogger] : [];
+const blackList = ['']
+const epicMiddleware = createEpicMiddleware()
 
-const middlewares = applyMiddleware(thunk, ...logger);
+const persistConfig = {
+  blackList,
+  key: 'root',
+  storage: AsyncStorage,
+}
 
-const initialState = {};
+// let tron
+// if (__DEV__) {
+//   const {
+//     trackGlobalErrors,
+//     openInEditor,
+//     overlay,
+//     asyncStorage,
+//     networking,
+//   } = require('reactotron-react-native')
+//   const Reactotron = require('reactotron-react-native').default
+//   const { reactotronRedux } = require('reactotron-redux')
 
-const store = createStore(reducer, initialState, middlewares);
-const persistor = persistStore(store);
+//   tron = Reactotron.configure({
+//     host: '192.168.15.11',
+//   })
+//     .useReactNative()
+//     .use(reactotronRedux())
+//     .use(trackGlobalErrors())
+//     .use(openInEditor())
+//     .use(overlay())
+//     .use(asyncStorage())
+//     .use(networking())
+//     .connect()
 
-export { store, persistor };
+//   tron.clear()
+// }
+
+const middlewares = [epicMiddleware, routerMiddleware]
+
+const enhancers = __DEV__
+  ? composeWithDevTools({})(applyMiddleware(...middlewares))
+  : applyMiddleware(...middlewares)
+
+
+const reducers = persistReducer(persistConfig, rootReducer)
+
+const configureStore = (_clean: boolean = false, epic: boolean = false): any => {
+  const create: StoreCreator = createStore
+
+  const store = create(reducers, enhancers)
+  const persistor = persistStore(store)
+
+  if (epic) {
+    epicMiddleware.run(rootEpic)
+  }
+
+  // Clear Store
+  if (_clean) {
+    persistor.purge()
+  }
+
+  return { persistor, store }
+}
+
+export default configureStore
