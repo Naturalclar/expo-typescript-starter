@@ -49,8 +49,3 @@ export const themes: IThemes[] = [
     { name: 'light', theme: lightTheme },
     { name: 'dark', theme: darkTheme },
 ]
-
-export const getTheme = (name: string): Theme => {
-    const search = themes.find(i => i.name === name)
-    if (search) return search.theme
-}
