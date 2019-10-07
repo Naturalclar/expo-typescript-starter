@@ -1,31 +1,33 @@
 ---
-name: "screen"
-description: "screen component template"
+name: "component"
+description: "Component component template"
 message: "Please enter the name of component to be created"
-root: "./src/screens"
+root: "./src/components"
 output: "**/*"
 ignore: []
 ---
 
-# `{{ input }}.tsx`
+# `{{ input | pascal }}/index.tsx`
 
-```tsx
+```jsx
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-})
+const Container = styled.View`
+  padding: 10px;
+`
 
 type Props = {}
 
-const {{ input }} = ({}: Props) => (
-<View style={styles.container}></View>
-)
+export const {{ input | pascal }} : React.FC<Props> = ({}: Props):JSX.Element => {
 
-export default {{ input }}
+
+  return (
+    <Container>
+
+    </Container>
+    )
+}
 
 ```
 
@@ -39,7 +41,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { AppPage } from 'containers'
 import { withRedux } from 'helpers'
 
-storiesOf('Screens', module)
+storiesOf('Components', module)
   .addDecorator(withKnobs)
   .addDecorator(withRedux())
   .add('{{ input | pascal }}', () => (

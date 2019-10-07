@@ -16,33 +16,6 @@ const persistConfig = {
   storage: AsyncStorage,
 }
 
-// let tron
-// if (__DEV__) {
-//   const {
-//     trackGlobalErrors,
-//     openInEditor,
-//     overlay,
-//     asyncStorage,
-//     networking,
-//   } = require('reactotron-react-native')
-//   const Reactotron = require('reactotron-react-native').default
-//   const { reactotronRedux } = require('reactotron-redux')
-
-//   tron = Reactotron.configure({
-//     host: '192.168.15.11',
-//   })
-//     .useReactNative()
-//     .use(reactotronRedux())
-//     .use(trackGlobalErrors())
-//     .use(openInEditor())
-//     .use(overlay())
-//     .use(asyncStorage())
-//     .use(networking())
-//     .connect()
-
-//   tron.clear()
-// }
-
 const middlewares = [epicMiddleware, routerMiddleware]
 
 const enhancers = __DEV__
