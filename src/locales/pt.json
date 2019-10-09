@@ -15,7 +15,9 @@
         "email": "E-mail",
         "password": "Senha",
         "submit": "Enviar",
-        "facebook": "Entrar usando Facebook"
+        "facebook": "Entrar usando Facebook",
+        "emailRequired": "E-mail obrigatório",
+        "required": "Campo obrigatório"
     },
     "yes": "Sim",
     "no": "Não",
