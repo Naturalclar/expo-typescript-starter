@@ -13,6 +13,11 @@ import { Provider as PaperProvider } from 'react-native-paper'
 import { ThemeProvider } from 'styled-components/native'
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
+import {
+  Appearance,
+  useColorScheme,
+  AppearanceProvider
+} from 'react-native-appearance'
 
 export const routerMiddleware = createReactNavigationReduxMiddleware(
   (state: any) => state
@@ -29,12 +34,19 @@ export const Navigator: React.FC = () => {
 
   React.useEffect(() => {
     i18n.changeLanguage(language)
+    let colorScheme = useColorScheme()
+    console.log(colorScheme)
     BackHandler.addEventListener('hardwareBackPress', onBackPress)
+    let themeSubscription = Appearance.addChangeListener(({ colorScheme }) => {
+      // do something with color scheme
+      console.log(colorScheme)
+    })
 
     return () => {
       BackHandler.removeEventListener('hardwareBackPress', onBackPress)
+      themeSubscription.remove()
     }
-  })
+  }, [language, theme])
 
   const onBackPress = () => {
     if (nav.index === 0) {
@@ -61,10 +73,16 @@ export const Navigator: React.FC = () => {
 
   const _theme = theme === 'light' ? lightTheme : darkTheme
   return (
-    <PaperProvider theme={_theme}>
-      <ThemeProvider theme={_theme.colors}>
-        <App state={nav} dispatch={dispatch} screenProps={{ theme: _theme }} />
-      </ThemeProvider>
-    </PaperProvider>
+    <AppearanceProvider>
+      <PaperProvider theme={_theme}>
+        <ThemeProvider theme={_theme.colors}>
+          <App
+            state={nav}
+            dispatch={dispatch}
+            screenProps={{ theme: _theme }}
+          />
+        </ThemeProvider>
+      </PaperProvider>
+    </AppearanceProvider>
   )
 }

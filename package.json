@@ -44,6 +44,7 @@
     "react-hook-form": "3.23.18",
     "react-i18next": "10.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-appearance": "^0.1.0",
     "react-native-elements": "^1.2.6",
     "react-native-gesture-handler": "1.4.1",
     "react-native-paper": "2.16.0",
