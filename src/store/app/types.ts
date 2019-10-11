@@ -1,8 +1,9 @@
 import { Action } from 'redux'
+import { Theme } from 'react-native-paper';
 
 export interface IApp {
   language: string
-  theme: string
+  theme: Theme
   online: boolean
 }
 

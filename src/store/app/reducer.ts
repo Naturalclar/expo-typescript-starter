@@ -1,10 +1,12 @@
 import { Reducer, Action } from 'redux'
 import * as actions from './actions'
 import { IApp } from './types'
+import { useColorScheme } from 'react-native-appearance'
+import { themes } from 'theme'
 
 export const initialState: IApp = {
   language: 'en',
-  theme: 'light',
+  theme: useColorScheme() === 'dark' ? themes.dark : themes.light,
   online: false
 }
 

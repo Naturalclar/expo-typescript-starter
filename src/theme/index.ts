@@ -22,6 +22,7 @@ export const darkTheme: Theme = {
         ...DarkTheme.colors,
         primary: pallete.primary,
         accent: pallete.accent,
+        background: '#070809'
     },
 }
 
@@ -42,10 +43,10 @@ export interface IStyled {
 }
 
 interface IThemes {
-    name: string
-    theme: Theme
+    light: Theme
+    dark: Theme
 }
-export const themes: IThemes[] = [
-    { name: 'light', theme: lightTheme },
-    { name: 'dark', theme: darkTheme },
-]
+export const themes: IThemes = {
+    light: lightTheme,
+    dark: darkTheme
+}

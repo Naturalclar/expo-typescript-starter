@@ -4,7 +4,7 @@ import {
   createReduxContainer
 } from 'react-navigation-redux-helpers'
 import { useDispatch, useSelector } from 'react-redux'
-import React from 'react'
+import React, { useState } from 'react'
 import { BackHandler, Alert } from 'react-native'
 import routes from 'screens'
 import { lightTheme, darkTheme } from 'theme'
@@ -13,6 +13,7 @@ import { Provider as PaperProvider } from 'react-native-paper'
 import { ThemeProvider } from 'styled-components/native'
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
+import { AppThemeChange } from './app/actions'
 import {
   Appearance,
   useColorScheme,
@@ -26,27 +27,30 @@ export const routerMiddleware = createReactNavigationReduxMiddleware(
 const App: any = createReduxContainer(routes, 'root')
 
 export const Navigator: React.FC = () => {
+  const colorScheme = useColorScheme()
   const dispatch = useDispatch()
   const language = useSelector((state: IAppState) => state.app.language)
-  const theme = useSelector((state: IAppState) => state.app.theme)
+  const [Dark, setDark] = useState(colorScheme)
   const nav = useSelector((state: IAppState) => state.nav)
   const { t } = useTranslation()
 
   React.useEffect(() => {
     i18n.changeLanguage(language)
-    let colorScheme = useColorScheme()
-    console.log(colorScheme)
     BackHandler.addEventListener('hardwareBackPress', onBackPress)
-    let themeSubscription = Appearance.addChangeListener(({ colorScheme }) => {
-      // do something with color scheme
-      console.log(colorScheme)
-    })
+    const themeSubscription = Appearance.addChangeListener(
+      ({ colorScheme }) => {
+        setDark(colorScheme)
+        dispatch(
+          AppThemeChange(colorScheme === 'dark' ? darkTheme : lightTheme)
+        )
+      }
+    )
 
     return () => {
       BackHandler.removeEventListener('hardwareBackPress', onBackPress)
       themeSubscription.remove()
     }
-  }, [language, theme])
+  }, [language, Dark])
 
   const onBackPress = () => {
     if (nav.index === 0) {
@@ -71,7 +75,7 @@ export const Navigator: React.FC = () => {
     return true
   }
 
-  const _theme = theme === 'light' ? lightTheme : darkTheme
+  const _theme = Dark === 'dark' ? darkTheme : lightTheme
   return (
     <AppearanceProvider>
       <PaperProvider theme={_theme}>

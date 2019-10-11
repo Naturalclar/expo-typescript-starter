@@ -3,7 +3,7 @@ import { Appbar, Button } from 'react-native-paper'
 import { Container } from 'components'
 import { useDispatch } from 'react-redux'
 
-import { AppLanguageChange, AppThemeChange } from 'store/app/actions'
+import { AppLanguageChange } from 'store/app/actions'
 import styled from 'styled-components/native'
 import { AuthForm } from 'containers'
 
@@ -23,20 +23,6 @@ export const Home: React.FC<IProps> = () => {
       </Appbar.Header>
       <Container>
         <AuthForm onSubmit={console.log} onFacebook={console.log} />
-        <Button
-          mode="contained"
-          onPress={() => dispatch(AppThemeChange('dark'))}
-        >
-          Dark
-        </Button>
-        <Divider />
-        <Button
-          mode="contained"
-          onPress={() => dispatch(AppThemeChange('light'))}
-        >
-          Light
-        </Button>
-        <Divider />
         <Button
           mode="contained"
           onPress={() => dispatch(AppLanguageChange('pt'))}
