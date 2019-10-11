@@ -1,9 +1,9 @@
 ---
-name: "component"
-description: "Component component template"
-message: "Please enter the name of component to be created"
-root: "./src/components"
-output: "**/*"
+name: 'component'
+description: 'Component component template'
+message: 'Please enter the name of component to be created'
+root: './src/components'
+output: '**/*'
 ignore: []
 ---
 

@@ -2,7 +2,7 @@
 name: "screen"
 description: "screen component template"
 message: "Please enter the name of component to be created"
-root: "./src/screens"
+root: "src/screens"
 output: "**/*"
 ignore: []
 ---
