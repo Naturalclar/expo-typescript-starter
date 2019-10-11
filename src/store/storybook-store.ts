@@ -1,4 +1,4 @@
-import { createStore, compose } from 'redux'
+import { createStore } from 'redux'
 import { StorybookReducer } from './storybook-reducers'
 import withReduxEnhancer from 'addon-redux/enhancer'
 

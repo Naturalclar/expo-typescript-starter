@@ -1,4 +1,3 @@
-import React from 'react'
 import { Provider } from 'react-redux'
 import addons from '@storybook/addons'
 import withReduxCore from 'addon-redux/withRedux'
