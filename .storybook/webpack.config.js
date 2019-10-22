@@ -21,7 +21,7 @@ const tsWorkerOptions = {
 module.exports = ({ config, mode }) => {
   if (mode !== "PRODUCTION") {
     threadLoader.warmup(babelWorkerOptions, ["babel-loader"]);
-    threadLoader.warmup(tsWorkerOptions, ["ts-loader"]);
+    threadLoader.warmup(tsWorkerOptions, ["babel-loader"]);
   }
   config.module.rules.push({
     test: /\.tsx?$/,
@@ -30,24 +30,18 @@ module.exports = ({ config, mode }) => {
       { loader: "cache-loader" },
       { loader: "thread-loader", options: tsWorkerOptions },
       {
-        loader: "ts-loader",
+        loader: "babel-loader",
         options: {
-          experimentalWatchApi: true,
-          transpileOnly: true,
-          happyPackMode: true
+          presets: ["@babel/preset-typescript"]
         }
       }
     ]
   });
 
-  // type-checking
-  config.plugins.push(
-    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true })
-  );
-
   config.module.rules.push({
     test: /\.jsx?$/,
     include: [
+      path.resolve(__dirname, "../node_modules/react-native"),
       path.resolve(__dirname, "../node_modules/react-native-paper"),
       path.resolve(__dirname, "../node_modules/react-native-elements"),
       path.resolve(__dirname, "../node_modules/react-native-safe-area-view"),
@@ -70,7 +64,7 @@ module.exports = ({ config, mode }) => {
       }
     ]
   });
-  // react-native を import している箇所を react-native-web に変換
+  // convert react-native to react-native-web for storybook
   config.resolve.alias["react-native$"] = require.resolve("react-native-web");
 
   config.resolve.alias["@expo/vector-icons"] = path.resolve(
@@ -78,7 +72,7 @@ module.exports = ({ config, mode }) => {
     "../node_modules/react-native-vector-icons"
   );
 
-  // .ts, .tsx を含めるように追加
+  // inlcude .ts and .tsx files
   config.resolve.extensions.push(".ts", ".tsx");
   return config;
 };
