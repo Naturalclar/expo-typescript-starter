@@ -1,22 +1,17 @@
-import { configure, addDecorator, addParameters } from "@storybook/react";
-import { withOptions } from "@storybook/addon-options";
-import { withKnobs } from "@storybook/addon-knobs";
-
+import { configure, addParameters } from "@storybook/react";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 function loadStories() {
   const req = require.context("../src", true, /\.story\.tsx?$/);
   req.keys().forEach(story => req(story));
 }
 
-addDecorator(withKnobs({ escapeHTML: false }));
-addDecorator(
-  withOptions({
-    addonPanelInRight: true
-  })
-);
-
 addParameters({
   viewport: {
+    viewports: INITIAL_VIEWPORTS,
     defaultViewport: "iphone5"
+  },
+  options: {
+    addonPanelInRight: true
   }
 });
 
