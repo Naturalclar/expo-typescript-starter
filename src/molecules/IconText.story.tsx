@@ -8,6 +8,6 @@ storiesOf("molecules", module)
   .addDecorator(StorybookContainer)
   .add("IconText", () => (
     <IconText icon={text("icon", "check")}>
-      {text("children", "Take it easy")}
+      {text("children", "Take it easy, I Have Changed my Text!! Mwahahaha")}
     </IconText>
   ));
