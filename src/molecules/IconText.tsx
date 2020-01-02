@@ -1,18 +1,18 @@
-import * as React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import * as React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 // @ts-ignore
-import Icon from "@expo/vector-icons/MaterialIcons";
+import Icon from '@expo/vector-icons/MaterialIcons';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center"
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   iconContainer: {
     marginRight: 4,
-    justifyContent: "center",
-    alignItems: "center"
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 interface Props {
@@ -25,8 +25,8 @@ interface Props {
 const IconText: React.FC<Props> = ({
   icon,
   children,
-  iconColor = "dodgerBlue",
-  textColor = "gray"
+  iconColor = 'dodgerBlue',
+  textColor = 'gray',
 }: Props): JSX.Element => (
   <View style={styles.container}>
     <View style={styles.iconContainer}>

@@ -1,43 +1,43 @@
-import * as React from "react";
-import { View, StyleSheet, Text } from "react-native";
-import DialogCloseButton from "./DialogCloseButton";
-import { RoundButton } from "../atoms";
-import IconText from "./IconText";
+import * as React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
+import DialogCloseButton from './DialogCloseButton';
+import { RoundButton } from '../atoms';
+import IconText from './IconText';
 
 const styles = StyleSheet.create({
   modal: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,.4)",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 24
+    backgroundColor: 'rgba(0,0,0,.4)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
   },
   container: {
     padding: 24,
     borderRadius: 10,
-    backgroundColor: "white",
-    width: "100%"
+    backgroundColor: 'white',
+    width: '100%',
   },
   main: {
     flex: 1,
-    alignItems: "center"
+    alignItems: 'center',
   },
   titleContainer: {
-    marginBottom: 16
+    marginBottom: 16,
   },
   titleText: {
-    fontSize: 18
+    fontSize: 18,
   },
   bodyContainer: {
-    marginBottom: 16
+    marginBottom: 16,
   },
   bodyText: {
     fontSize: 14,
-    color: "gray"
+    color: 'gray',
   },
   checkList: {
-    marginBottom: 16
-  }
+    marginBottom: 16,
+  },
 });
 
 interface Props {
@@ -53,7 +53,7 @@ const DismissableDialog: React.FC<Props> = ({
   body,
   onPressOk,
   onRequestClose,
-  buttonText = "ok"
+  buttonText = 'ok',
 }: Props): JSX.Element => (
   <View style={styles.modal}>
     <View style={styles.container}>

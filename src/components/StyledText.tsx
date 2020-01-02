@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import * as React from "react";
-import { Text, TextStyle } from "react-native";
+import * as React from 'react';
+import { Text, TextStyle } from 'react-native';
 
 interface Props {
   style?: TextStyle;

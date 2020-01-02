@@ -1,14 +1,14 @@
-import * as React from "react";
-import { View, StyleSheet } from "react-native";
-import IconButton from "../atoms/button/IconButton";
+import * as React from 'react';
+import { View, StyleSheet } from 'react-native';
+import IconButton from '../atoms/button/IconButton';
 
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
+    position: 'absolute',
     top: 16,
     right: 16,
-    zIndex: 2
-  }
+    zIndex: 2,
+  },
 });
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
 }
 
 const DialogCloseButton: React.FC<Props> = ({
-  onPress
+  onPress,
 }: Props): JSX.Element => (
   <View style={styles.container}>
     <IconButton icon="close" onPress={onPress} />

@@ -1,19 +1,19 @@
-import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row"
+    flexDirection: 'row',
   },
-  name: { fontWeight: "bold" },
+  name: { fontWeight: 'bold' },
   content: {},
   avatar: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "blue",
-    marginRight: 8
-  }
+    backgroundColor: 'blue',
+    marginRight: 8,
+  },
 });
 
 type Props = {
@@ -25,7 +25,7 @@ type Props = {
 const ListItem: React.FC<Props> = ({
   onPress,
   name,
-  content
+  content,
 }: Props): JSX.Element => (
   <TouchableOpacity onPress={onPress}>
     <View style={styles.container}>

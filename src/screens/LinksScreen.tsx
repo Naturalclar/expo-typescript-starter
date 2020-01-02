@@ -1,13 +1,14 @@
-import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import { ExpoLinksView } from "@expo/samples";
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
+// @ts-ignore
+import { ExpoLinksView } from '@expo/samples';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 15,
-    backgroundColor: "#fff"
-  }
+    backgroundColor: '#fff',
+  },
 });
 
 const LinksScreen = (): JSX.Element => (
@@ -19,7 +20,7 @@ const LinksScreen = (): JSX.Element => (
 );
 
 LinksScreen.navigationOptions = {
-  title: "Links"
+  title: 'Links',
 };
 
 export default LinksScreen;
