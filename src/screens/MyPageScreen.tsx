@@ -1,6 +1,6 @@
-import * as React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { connectActionSheet } from "@expo/react-native-action-sheet";
+import * as React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { connectActionSheet } from '@expo/react-native-action-sheet';
 
 interface Props {
   showActionSheetWithOptions: (
@@ -11,7 +11,7 @@ interface Props {
 
 const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
   const onOpenActionSheet = (): void => {
-    const options = ["Foo", "Bar", "Cancel"];
+    const options = ['Foo', 'Bar', 'Cancel'];
     const okButtonIndex = 0;
     const destructionButtonIndex = 1;
     const cancelButtonIndex = 2;
@@ -19,7 +19,7 @@ const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
     showActionSheetWithOptions(
       {
         options,
-        cancelButtonIndex
+        cancelButtonIndex,
       },
       buttonIndex => {
         switch (buttonIndex) {
@@ -46,7 +46,7 @@ const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
 };
 
 MyPageScreen.navigationOptions = {
-  title: "MyPage"
+  title: 'MyPage',
 };
 
 export default connectActionSheet(MyPageScreen);

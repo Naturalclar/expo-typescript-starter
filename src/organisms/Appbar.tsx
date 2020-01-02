@@ -1,14 +1,14 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Appbar } from "react-native-paper";
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { Appbar } from 'react-native-paper';
 
 const styles = StyleSheet.create({
   container: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     right: 0,
-    left: 0
-  }
+    left: 0,
+  },
 });
 
 interface Props {
@@ -20,9 +20,9 @@ interface Props {
 
 const AppbarExample: React.FC<Props> = ({
   title,
-  subtitle = "",
+  subtitle = '',
   onPressBack,
-  onPressAction
+  onPressAction,
 }: Props): JSX.Element => (
   <Appbar style={styles.container}>
     <Appbar.BackAction color="white" onPress={onPressBack} />

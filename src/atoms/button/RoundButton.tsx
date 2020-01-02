@@ -1,17 +1,17 @@
-import * as React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import * as React from 'react';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     borderRadius: 100,
     paddingVertical: 8,
     paddingHorizontal: 12,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
-    color: "white"
-  }
+    color: 'white',
+  },
 });
 
 interface Props {
@@ -23,7 +23,7 @@ interface Props {
 const RoundButton: React.FC<Props> = ({
   onPress,
   label,
-  color = "dodgerblue"
+  color = 'dodgerblue',
 }: Props): JSX.Element => (
   <TouchableOpacity
     style={[styles.container, { backgroundColor: color }]}

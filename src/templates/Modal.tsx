@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Modal } from "react-native-paper";
+import * as React from 'react';
+import { Modal } from 'react-native-paper';
 
 interface Props {
   visible: boolean;
@@ -8,7 +8,7 @@ interface Props {
 
 const ModalTemplate: React.FC<Props> = ({
   visible,
-  children
+  children,
 }: Props): JSX.Element => <Modal visible={visible}>{children}</Modal>;
 
 export default ModalTemplate;
