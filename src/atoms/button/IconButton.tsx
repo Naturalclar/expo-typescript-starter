@@ -17,7 +17,7 @@ interface Props {
   size?: number;
 }
 
-const IconButton: React.FC<Props> = ({
+export const IconButton: React.FC<Props> = ({
   icon,
   onPress,
   color = 'gray',
@@ -28,4 +28,3 @@ const IconButton: React.FC<Props> = ({
   </TouchableOpacity>
 );
 
-export default IconButton;

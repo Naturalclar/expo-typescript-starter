@@ -20,7 +20,7 @@ interface Props {
   label: string;
 }
 
-const RoundButton: React.FC<Props> = ({
+export const RoundButton: React.FC<Props> = ({
   onPress,
   label,
   color = 'dodgerblue',
@@ -33,4 +33,4 @@ const RoundButton: React.FC<Props> = ({
   </TouchableOpacity>
 );
 
-export default RoundButton;
+

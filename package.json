@@ -18,11 +18,19 @@
     "storybook": "start-storybook -p 9001 -c .storybook -s .storybook/assets",
     "storybook:build": "build-storybook -c .storybook -s .storybook/assets",
     "storycap:all": "rm -rf ./__screenshots__ && yarn storycap --serverCmd 'yarn storybook --ci' --viewport '414x736' --serverTimeout '200000'",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "test": "jest --watchAll",
     "type-check": "tsc --noEmit"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "dependencies": {
     "@expo/react-native-action-sheet": "^2.1.0",
@@ -53,12 +61,12 @@
     "@storybook/react": "^5.2.5",
     "@types/expo": "^32.0.13",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/jest": "^24.0.0",
+    "@types/jest": "25.1.4",
     "@types/react": "^16.8.19",
     "@types/react-native": "0.61.20",
     "@types/react-navigation": "^3.0.1",
     "@types/react-redux": "^7.1.2",
-    "@types/react-test-renderer": "^16.8.1",
+    "@types/react-test-renderer": "16.9.2",
     "@types/redux": "^3.6.0",
     "@types/redux-logger": "^3.0.6",
     "@types/redux-persist": "^4.3.1",
@@ -71,7 +79,7 @@
     "eslint": "^5.13.0",
     "eslint-plugin-prettier": "^3.0.1",
     "fork-ts-checker-webpack-plugin": "^1.0.0",
-    "jest-expo": "^36.0.0",
+    "jest": "^25.1.0",
     "metro-react-native-babel-preset": "0.58.0",
     "node-fetch": "^2.3.0",
     "now": "^15.8.7",

@@ -1,2 +1,2 @@
-export { default as RoundButton } from './RoundButton';
-export { default as IconButton } from './IconButton';
+export { RoundButton } from './RoundButton';
+export { IconButton } from './IconButton';
