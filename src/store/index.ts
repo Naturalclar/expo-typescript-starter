@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
-import { persistStore } from 'redux-persist';
+import {createStore, applyMiddleware} from 'redux';
+import {persistStore} from 'redux-persist';
 import thunk from 'redux-thunk';
 import reduxLogger from 'redux-logger';
 import reducer from '../reducer';
@@ -14,4 +14,4 @@ const initialState = {};
 const store = createStore(reducer, initialState, middlewares);
 const persistor = persistStore(store);
 
-export { store, persistor };
+export {store, persistor};

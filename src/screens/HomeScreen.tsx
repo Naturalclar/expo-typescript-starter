@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { WebBrowser } from 'expo';
+import {WebBrowser} from 'expo';
 
-import { MonoText } from '../components/StyledText';
-import { RobotDev, RobotProd } from '../assets/images';
+import {MonoText} from '../components/StyledText';
+import {RobotDev, RobotProd} from '../assets/images';
 
 const styles = StyleSheet.create({
   container: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbfbfb',
     paddingVertical: 20,
     shadowColor: 'black',
-    shadowOffset: { width: 0, height: -3 },
+    shadowOffset: {width: 0, height: -3},
     shadowOpacity: 0.1,
     shadowRadius: 3,
   },
@@ -107,13 +107,13 @@ const styles = StyleSheet.create({
 
 const handleLearnMorePress = (): void => {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/guides/development-mode'
+    'https://docs.expo.io/versions/latest/guides/development-mode',
   );
 };
 
 const handleHelpPress = (): void => {
   WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
+    'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes',
   );
 };
 
@@ -144,8 +144,7 @@ const HomeScreen = (): JSX.Element => (
   <View style={styles.container}>
     <ScrollView
       style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
+      contentContainerStyle={styles.contentContainer}>
       <View style={styles.welcomeContainer}>
         <Image
           source={__DEV__ ? RobotDev : RobotProd}
@@ -159,8 +158,7 @@ const HomeScreen = (): JSX.Element => (
         <Text style={styles.getStartedText}>Get started by opening</Text>
 
         <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-        >
+          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
           <MonoText style={styles.codeHighlightText}>
             screens/HomeScreen.js
           </MonoText>
@@ -185,8 +183,7 @@ const HomeScreen = (): JSX.Element => (
         ios: styles.tabBarInfoContainerIos,
         // @ts-ignore
         android: styles.tabBarInfoContainerAndroid,
-      })}
-    >
+      })}>
       <Text style={styles.tabBarInfoText}>
         This is a tab bar. You can edit it in:
       </Text>

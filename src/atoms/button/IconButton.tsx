@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 // @ts-ignore Storybook works by this import, but types are not provided
 import Icon from '@expo/vector-icons/MaterialIcons';
 
@@ -27,4 +27,3 @@ export const IconButton: React.FC<Props> = ({
     <Icon name={icon} color={color} size={size} />
   </TouchableOpacity>
 );
-

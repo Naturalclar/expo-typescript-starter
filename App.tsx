@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
-import { AppLoading } from 'expo';
-import { Asset } from 'expo-asset';
+import {Platform, StatusBar, StyleSheet, View} from 'react-native';
+import {AppLoading} from 'expo';
+import {Asset} from 'expo-asset';
 import * as Font from 'expo-font';
 import * as Icon from '@expo/vector-icons';
-import { Provider } from 'react-redux';
-import { ActionSheetProvider } from '@expo/react-native-action-sheet';
-import { PersistGate } from 'redux-persist/integration/react';
-import { store, persistor } from './src/store';
+import {Provider} from 'react-redux';
+import {ActionSheetProvider} from '@expo/react-native-action-sheet';
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persistor} from './src/store';
 import AppNavigator from './src/navigation/AppNavigator';
-import { RobotDev, RobotProd } from './src/assets/images';
+import {RobotDev, RobotProd} from './src/assets/images';
 
 const styles = StyleSheet.create({
   container: {
@@ -46,12 +46,12 @@ export default class App extends React.Component<Props> {
   };
 
   public handleFinishLoading = () => {
-    this.setState({ isLoadingComplete: true });
+    this.setState({isLoadingComplete: true});
   };
 
   public render(): JSX.Element {
-    const { isLoadingComplete } = this.state;
-    const { skipLoadingScreen } = this.props;
+    const {isLoadingComplete} = this.state;
+    const {skipLoadingScreen} = this.props;
     if (!isLoadingComplete && !skipLoadingScreen) {
       return (
         <AppLoading

@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore
-import { ExpoConfigView } from '@expo/samples';
+import {ExpoConfigView} from '@expo/samples';
 
 const SettingsScreen = (): JSX.Element => <ExpoConfigView />;
 

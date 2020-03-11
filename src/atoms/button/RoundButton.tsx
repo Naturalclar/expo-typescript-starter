@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,11 +26,8 @@ export const RoundButton: React.FC<Props> = ({
   color = 'dodgerblue',
 }: Props): JSX.Element => (
   <TouchableOpacity
-    style={[styles.container, { backgroundColor: color }]}
-    onPress={onPress}
-  >
+    style={[styles.container, {backgroundColor: color}]}
+    onPress={onPress}>
     <Text style={styles.text}>{label}</Text>
   </TouchableOpacity>
 );
-
-

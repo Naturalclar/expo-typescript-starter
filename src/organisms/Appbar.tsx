@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Appbar } from 'react-native-paper';
+import {StyleSheet} from 'react-native';
+import {Appbar} from 'react-native-paper';
 
 const styles = StyleSheet.create({
   container: {

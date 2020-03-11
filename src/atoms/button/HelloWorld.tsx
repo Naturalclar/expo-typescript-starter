@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
 
 interface Props {
   children: React.ReactChild;
 }
 
-const Button = ({ children }: Props) => (
+const Button = ({children}: Props) => (
   <View>
     <Text>{children}</Text>
   </View>

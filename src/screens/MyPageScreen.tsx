@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { connectActionSheet } from '@expo/react-native-action-sheet';
+import {View, Text, TouchableOpacity} from 'react-native';
+import {connectActionSheet} from '@expo/react-native-action-sheet';
 
 interface Props {
   showActionSheetWithOptions: (
     options: any,
-    buttonIndex: (index: number) => void
+    buttonIndex: (index: number) => void,
   ) => void;
 }
 
-const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
+const MyPageScreen = ({showActionSheetWithOptions}: Props): JSX.Element => {
   const onOpenActionSheet = (): void => {
     const options = ['Foo', 'Bar', 'Cancel'];
     const okButtonIndex = 0;
@@ -32,7 +32,7 @@ const MyPageScreen = ({ showActionSheetWithOptions }: Props): JSX.Element => {
           default:
             break;
         }
-      }
+      },
     );
   };
 

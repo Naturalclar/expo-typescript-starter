@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
   },
-  name: { fontWeight: 'bold' },
+  name: {fontWeight: 'bold'},
   content: {},
   avatar: {
     width: 40,

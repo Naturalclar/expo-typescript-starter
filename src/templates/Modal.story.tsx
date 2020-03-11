@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { storiesOf } from '@storybook/react';
-import { boolean } from '@storybook/addon-knobs';
+import {View, Text, StyleSheet} from 'react-native';
+import {storiesOf} from '@storybook/react';
+import {boolean} from '@storybook/addon-knobs';
 
 import Modal from './Modal';
 

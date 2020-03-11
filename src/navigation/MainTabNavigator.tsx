@@ -1,9 +1,6 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import {
-  createStackNavigator,
-  createBottomTabNavigator,
-} from 'react-navigation';
+import {Platform} from 'react-native';
+import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
@@ -21,7 +18,7 @@ const HomeStack = createStackNavigator({
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }: TabProps) => (
+  tabBarIcon: ({focused}: TabProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-home' : 'md-home'}
@@ -35,7 +32,7 @@ const LinksStack = createStackNavigator({
 
 LinksStack.navigationOptions = {
   tabBarLabel: 'Find',
-  tabBarIcon: ({ focused }: TabProps) => (
+  tabBarIcon: ({focused}: TabProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-compass' : 'md-compass'}
@@ -49,7 +46,7 @@ const SettingsStack = createStackNavigator({
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Notifications',
-  tabBarIcon: ({ focused }: TabProps) => (
+  tabBarIcon: ({focused}: TabProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-notifications' : 'md-notifications'}
@@ -63,7 +60,7 @@ const MyPageStack = createStackNavigator({
 
 MyPageStack.navigationOptions = {
   tabBarLabel: 'MyPage',
-  tabBarIcon: ({ focused }: TabProps) => (
+  tabBarIcon: ({focused}: TabProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-person' : 'md-person'}

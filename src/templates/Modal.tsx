@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Modal } from 'react-native-paper';
+import {Modal} from 'react-native-paper';
 
 interface Props {
   visible: boolean;

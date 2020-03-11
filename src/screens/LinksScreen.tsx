@@ -1,7 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 // @ts-ignore
-import { ExpoLinksView } from '@expo/samples';
+import {ExpoLinksView} from '@expo/samples';
 
 const styles = StyleSheet.create({
   container: {

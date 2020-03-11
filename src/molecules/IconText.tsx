@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 // @ts-ignore
 import Icon from '@expo/vector-icons/MaterialIcons';
 
@@ -32,7 +32,7 @@ const IconText: React.FC<Props> = ({
     <View style={styles.iconContainer}>
       <Icon name={icon} color={iconColor} />
     </View>
-    <Text style={{ color: textColor }}>{children}</Text>
+    <Text style={{color: textColor}}>{children}</Text>
   </View>
 );
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
+import {storiesOf} from '@storybook/react';
+import {action} from '@storybook/addon-actions';
+import {text} from '@storybook/addon-knobs';
 import Appbar from './Appbar';
 
 storiesOf('React Native Paper', module).add('Appbar', () => (

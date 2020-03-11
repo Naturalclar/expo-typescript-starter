@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Icon from '@expo/vector-icons';
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import Colors from '../constants/Colors';
 
 interface Props {
@@ -9,10 +9,10 @@ interface Props {
 }
 
 const styles = StyleSheet.create({
-  icon:{ marginBottom: -3 },
+  icon: {marginBottom: -3},
 });
 
-const TabBarIcon = ({ name, focused }: Props) => (
+const TabBarIcon = ({name, focused}: Props) => (
   <Icon.Ionicons
     name={name}
     size={26}
