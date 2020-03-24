@@ -3717,10 +3717,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native-vector-icons@*":
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.0.tgz#3ff6b29c8e831f11364c12801ae7966dab8dcbe0"
-  integrity sha512-UNRMIMbqeryNDQvZVZoPyqXIKLWmLRInhN5gDySxquJcZvWNW+1NSm4lXQlRdzC9Da3mSU1QEppoeI438f2JRw==
+"@types/react-native-vector-icons@*", "@types/react-native-vector-icons@^6.4.4":
+  version "6.4.5"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.5.tgz#74cbfc564bd8435e43ad6728572a0e5b49c335d1"
+  integrity sha512-JBpcjWQE4n0GlE0p6HpDDclT+uXpFC453T5k4h+B38q0utlGJhvgNr8899BoJGc1xOktA2cgqFKmFMJd0h7YaA==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
@@ -6918,7 +6918,7 @@ deep-object-diff@^1.1.0:
   resolved "https://registry.yarnpkg.com/deep-object-diff/-/deep-object-diff-1.1.0.tgz#d6fabf476c2ed1751fc94d5ca693d2ed8c18bc5a"
   integrity sha512-b+QLs5vHgS+IoSNcUE4n9HP2NwcHj7aqnJWsjPtuG75Rh5TOaGt0OjAYInh77d5T16V5cRDC+Pw/6ZZZiETBGw==
 
-deepmerge@3.2.0, deepmerge@^3.1.0:
+deepmerge@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.2.0.tgz#58ef463a57c08d376547f8869fdc5bcee957f44e"
   integrity sha512-6+LuZGU7QCNUnAJyX8cIrlzoEgggTM6B7mm+znKOX4t5ltluT9KLjN6g61ECMS0LTsLW7yDpNoxhix5FZcrIow==
@@ -6928,7 +6928,7 @@ deepmerge@^2.1.1:
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
 
-deepmerge@^3.2.0:
+deepmerge@^3.1.0, deepmerge@^3.2.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.3.0.tgz#d3c47fd6f3a93d517b14426b0628a17b0125f5f7"
   integrity sha512-GRQOafGHwMHpjPx9iCvTgpu9NojZ49q794EEL94JVEw6VaeA8XTUyBKvAkOOjBX9oJNiV6G3P+T+tihFjo2TqA==
@@ -13319,7 +13319,7 @@ prompts@^2.2.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@15.7.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -13327,14 +13327,6 @@ prop-types@15.7.2, prop-types@^15.7.2:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
     react-is "^16.8.1"
-
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
-  integrity sha512-3pboPvLiWD7dkI3qf3KbUe6hKFKa52w+AE0VCqECtf+QHAKgOL37tTaNCnuX1nAAQ4ZhyP+kYVKf8rLmJ/feDQ==
-  dependencies:
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
 
 property-information@^5.0.0, property-information@^5.0.1:
   version "5.0.1"
@@ -13779,16 +13771,17 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-native-elements@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-1.1.0.tgz#f99bcda4459a886f3ab4591c684c099d37aedf2b"
-  integrity sha512-n1eOL0kUdlH01zX7bn1p7qhYXn7kquqxYQ0oWlxoAck9t5Db/KeK5ViOsAk8seYSvAG6Pe7OxgzRFnMfFhng0Q==
+react-native-elements@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-1.2.7.tgz#1eca2db715c41722aeb67aea62bd2a4621adb134"
+  integrity sha512-0S+0R1cbItl15i64qrkWnyMztwpw60d0SUsZGVDKRAMf0Jvq9Clgyh/MzxJx2sr42mbedQP1sg5Et4fZM7Fp1w==
   dependencies:
+    "@types/react-native-vector-icons" "^6.4.4"
     color "^3.1.0"
     deepmerge "^3.1.0"
     hoist-non-react-statics "^3.1.0"
     opencollective-postinstall "^2.0.0"
-    prop-types "^15.5.8"
+    prop-types "^15.7.2"
     react-native-ratings "^6.3.0"
     react-native-status-bar-height "^2.2.0"
 
