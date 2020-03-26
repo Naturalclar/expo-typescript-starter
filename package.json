@@ -43,7 +43,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/preset-typescript": "^7.6.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@octokit/rest": "^16.16.0",
     "@react-native-community/eslint-config": "0.0.7",
     "@storybook/addon-actions": "^5.2.5",
