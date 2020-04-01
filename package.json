@@ -54,7 +54,7 @@
     "@types/expo": "^32.0.13",
     "@types/expo__vector-icons": "9.0.1",
     "@types/jest": "^24.0.0",
-    "@types/react": "^16.8.19",
+    "@types/react": "^16.9.30",
     "@types/react-native": "0.61.23",
     "@types/react-navigation": "^3.0.1",
     "@types/react-redux": "^7.1.7",
