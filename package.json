@@ -29,7 +29,7 @@
     "@expo/samples": "^3.0.3",
     "@expo/vector-icons": "10.0.6",
     "expo": "^36.0.0",
-    "expo-asset": "~8.0.0",
+    "expo-asset": "~8.1.4",
     "expo-font": "~8.0.0",
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
