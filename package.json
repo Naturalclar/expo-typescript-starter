@@ -62,7 +62,7 @@
     "@types/redux-logger": "^3.0.7",
     "@types/redux-persist": "^4.3.1",
     "@types/redux-thunk": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.4.2",
     "babel-loader": "^8.1.0",
     "babel-preset-expo": "^8.1.0",
