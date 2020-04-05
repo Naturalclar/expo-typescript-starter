@@ -43,7 +43,6 @@ module.exports = ({ config, mode }) => {
     include: [
       path.resolve(__dirname, "../node_modules/react-native"),
       path.resolve(__dirname, "../node_modules/react-native-paper"),
-      path.resolve(__dirname, "../node_modules/react-native-elements"),
       path.resolve(__dirname, "../node_modules/react-native-safe-area-view"),
       path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
       path.resolve(__dirname, "../node_modules/@expo/vector-icons"),

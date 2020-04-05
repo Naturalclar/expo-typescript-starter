@@ -18,7 +18,6 @@ Storybook can be viewed [here](https://expo-storybook-web-example.naturalclar.no
 
 ## Component Libraries
 
-- [React-Native-Elements](https://react-native-training.github.io/react-native-elements/)
 - [React-Native-Paper](https://reactnativepaper.com/)
 
 ## Getting started
