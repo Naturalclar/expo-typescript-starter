@@ -80,7 +80,7 @@
     "react-native-elements": "^1.2.7",
     "react-native-vector-icons": "^6.5.0",
     "react-native-web": "^0.11.7",
-    "react-test-renderer": "^16.8.3",
+    "react-test-renderer": "^16.13.0",
     "redux-logger": "^3.0.6",
     "reg-keygen-git-hash-plugin": "^0.7.25",
     "reg-notify-github-plugin": "^0.7.25",
