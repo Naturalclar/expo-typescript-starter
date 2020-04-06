@@ -53,7 +53,7 @@
     "@storybook/react": "^5.3.17",
     "@types/expo": "^32.0.13",
     "@types/expo__vector-icons": "9.0.1",
-    "@types/jest": "^24.0.0",
+    "@types/jest": "^25.2.1",
     "@types/react": "^16.9.11",
     "@types/react-native": "^0.62.1",
     "@types/react-redux": "^7.1.7",
