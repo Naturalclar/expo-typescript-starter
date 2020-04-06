@@ -25,7 +25,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "@expo/react-native-action-sheet": "^2.1.0",
+    "@expo/react-native-action-sheet": "^3.6.0",
     "@expo/samples": "^3.0.3",
     "@expo/vector-icons": "^10.0.6",
     "expo": "^37.0.0",
