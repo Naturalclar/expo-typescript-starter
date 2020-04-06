@@ -34,7 +34,7 @@
     "react": "16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
     "react-native-gesture-handler": "~1.6.0",
-    "react-native-paper": "^3.6.0",
+    "react-native-paper": "^3.7.0",
     "react-native-reanimated": "~1.7.0",
     "react-navigation": "^3.11.0",
     "react-redux": "7.1.3",
