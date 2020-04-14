@@ -70,7 +70,7 @@
     "jest-expo": "^37.0.0",
     "metro-react-native-babel-preset": "0.58.0",
     "node-fetch": "^2.3.0",
-    "now": "^15.8.7",
+    "now": "^18.0.0",
     "prettier": "^2.0.2",
     "react-art": "16.9.0",
     "react-dom": "16.9.0",
