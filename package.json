@@ -45,7 +45,7 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.9.0",
     "@octokit/rest": "^16.16.0",
-    "@react-native-community/eslint-config": "^1.0.0",
+    "@react-native-community/eslint-config": "^1.1.0",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-options": "^5.3.18",
