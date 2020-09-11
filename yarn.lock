@@ -14827,7 +14827,7 @@ reg-cli@^0.15.13:
     mustache "3.1.0"
     x-img-diff-js "0.3.5"
 
-reg-gh-app-interface@^1.0.1:
+reg-gh-app-interface@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/reg-gh-app-interface/-/reg-gh-app-interface-1.0.6.tgz#6e4f78f2e5c60585dac87b21d1cbc586dbb7f71c"
   integrity sha512-aLI9CpVlSyw3pdJkPS4E7P8pMjJG3DQrEN5bO5ANySxhHndXA7/uTGEe6kcK6V+/+xcYOsvoE6UrRphhkCZy3w==
@@ -14839,14 +14839,14 @@ reg-keygen-git-hash-plugin@^0.7.25:
   dependencies:
     reg-suit-util "^0.7.25"
 
-reg-notify-github-plugin@^0.7.25:
-  version "0.7.25"
-  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.7.25.tgz#263922918feeed27de570dd08f61fa339c50f787"
-  integrity sha512-9F8Vhcglnf6UNS1a/IuZ5+zDH9EsXobTVNEhpfmU9ySRO9Tg/OfbNC1QVwzXhxWsy7/b7ERokJUpaWYui0H2Bw==
+reg-notify-github-plugin@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/reg-notify-github-plugin/-/reg-notify-github-plugin-0.10.3.tgz#284539c5c618f9ab7a4031436ceccb4b25acc261"
+  integrity sha512-hfYiXj0ni3adWj1Xgx7oMIwN/qqLyMDQsblm6HoNOzY9yxithMQKT7G/2ngecSUU66hi840dLc+u40uGrmfKHQ==
   dependencies:
     opn "^5.4.0"
-    reg-gh-app-interface "^1.0.1"
-    reg-suit-util "^0.7.25"
+    reg-gh-app-interface "^1.0.6"
+    reg-suit-util "^0.10.3"
     request "^2.81.0"
     request-promise "^4.2.1"
     tiny-commit-walker "^1.1.2"
@@ -14870,6 +14870,19 @@ reg-suit-core@^0.8.6:
     reg-cli "^0.15.13"
     reg-suit-util "^0.8.5"
     rimraf "^2.6.1"
+
+reg-suit-util@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.3.tgz#c5c4067e77b7a1b8fde661ffd31d818d7e0d3af1"
+  integrity sha512-Fx++RKCxr08mqN+Yg10ueaaq8IUnm9h3fu+45LsFkMg34e22kfZk5JtpeUANvUuYzsVYjQ0NU25S024Aho6gzg==
+  dependencies:
+    chalk "^2.0.1"
+    cli-progress "^1.4.1"
+    cli-spinner "^0.2.6"
+    glob "^7.1.2"
+    lodash "^4.17.4"
+    mime-types "^2.1.15"
+    mkdirp "^0.5.1"
 
 reg-suit-util@^0.7.25:
   version "0.7.25"
