@@ -77,7 +77,7 @@
     "react-native-web": "^0.12.2",
     "react-test-renderer": "^16.9.0",
     "redux-logger": "^3.0.6",
-    "reg-keygen-git-hash-plugin": "^0.7.25",
+    "reg-keygen-git-hash-plugin": "^0.10.6",
     "reg-notify-github-plugin": "^0.7.25",
     "reg-publish-s3-plugin": "^0.9.0",
     "reg-suit": "^0.10.0",
