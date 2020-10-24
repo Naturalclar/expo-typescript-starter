@@ -64,7 +64,7 @@
     "babel-loader": "^8.1.0",
     "babel-preset-expo": "^8.1.0",
     "cache-loader": "^4.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.12.0",
     "fork-ts-checker-webpack-plugin": "^1.0.0",
     "jest-expo": "^37.0.0",
     "metro-react-native-babel-preset": "0.58.0",
