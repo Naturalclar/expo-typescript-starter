@@ -32,7 +32,7 @@ module.exports = ({ config, mode }) => {
       {
         loader: "babel-loader",
         options: {
-          presets: ["@babel/preset-typescript"]
+          presets: ["module:metro-react-native-babel-preset"]
         }
       }
     ]
