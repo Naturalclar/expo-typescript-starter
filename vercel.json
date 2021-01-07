@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "project": "expo-storybook-web-example",
   "builds": [
     {
       "src": "package.json",
