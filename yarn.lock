@@ -15254,14 +15254,14 @@ reg-notify-github-plugin@^0.10.8:
     request-promise "^4.2.6"
     tiny-commit-walker "^1.1.2"
 
-reg-publish-s3-plugin@^0.10.8:
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/reg-publish-s3-plugin/-/reg-publish-s3-plugin-0.10.8.tgz#22b846fbf16679807c182e263cd01fea33eceba1"
-  integrity sha512-ig+IsMUVTi2XvYhlY/qX2Lz+BHA8e0D/C168Yq0ZzGqs/oBJCL7E0eMETBH85PjpDdXwV5k1JqcA4Ux5KRKicw==
+reg-publish-s3-plugin@^0.10.10:
+  version "0.10.10"
+  resolved "https://registry.yarnpkg.com/reg-publish-s3-plugin/-/reg-publish-s3-plugin-0.10.10.tgz#dea357db96804fb05cac9985b26c9c6929131053"
+  integrity sha512-WJrFD4REI0HR1gLB6eVPpfYAAKQn/rekP1n70ndcxm9pVqX+FXETKhBNEiFXdf36EKLuJW7Sw1p3NN91eSIAuA==
   dependencies:
     aws-sdk "^2.755.0"
     mkdirp "^1.0.4"
-    reg-suit-util "^0.10.8"
+    reg-suit-util "^0.10.10"
     uuid "^8.3.0"
 
 reg-suit-core@^0.10.8:
@@ -15274,10 +15274,10 @@ reg-suit-core@^0.10.8:
     reg-suit-util "^0.10.8"
     rimraf "^3.0.2"
 
-reg-suit-util@^0.10.8:
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.8.tgz#82ee9e92848ecdc09b7eb60f2b0aab4b6b36479a"
-  integrity sha512-eVJ11zsWD9F90Wl27f0H09Let+e6102ZSUDPchHLmBjdsfzajipvUbmjDbuuHi179mmsUtw7qDtb1SoghTDzpQ==
+reg-suit-util@^0.10.10, reg-suit-util@^0.10.8:
+  version "0.10.10"
+  resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.10.tgz#0a710fa32305d464285de9208a5d0c034ac1d194"
+  integrity sha512-LkWJqJI3zlolm1Bd/Rvhi2IKE2NpVnvtMBWQy0j2lt1C/3MfpReB8g2rsRxUw58MIH2KwKBUWRlMKReKCiUApw==
   dependencies:
     "@types/cli-progress" "^3.8.0"
     "@types/cli-spinner" "^0.2.0"
@@ -17878,15 +17878,10 @@ uuid@^2.0.1:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
   integrity sha1-Z+LoY3lyFVMN/zGOW/nc6/1Hsho=
 
-uuid@^3.1.0, uuid@^3.4.0:
+uuid@^3.1.0, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
-
-uuid@^3.3.2:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
-  integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
 uuid@^7.0.3:
   version "7.0.3"
