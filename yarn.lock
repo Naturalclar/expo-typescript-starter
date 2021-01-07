@@ -14758,19 +14758,24 @@ react-native-gesture-handler@~1.7.0:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-iphone-x-helper@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
+  integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
 react-native-maps@*:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.23.0.tgz#edbfdcad0e42190627eb1c8067eaba5965c8f81e"
   integrity sha512-qxOIQGsDtQXQlSJdXMW1wg8pvLaVYdbiIolB7tZTTgTGgIA/hDxXwZbQZ08c4KDD6/VTk8krfd1APaHkqvh6og==
 
-react-native-paper@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-3.10.1.tgz#4fca72b9f154fc5ad3710d633787c55e878e8f36"
-  integrity sha512-rl1B9z/S3Q+D4lzTqQOVjpKTd7eLOUhxp7HRufsw8lq4hznAAckynelxOkHxZLHyWT1w9SX4Hdv654i4Uo1KEg==
+react-native-paper@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.5.0.tgz#5f1f1e658dbd7a322a299e08ce76e22be44c01d5"
+  integrity sha512-mQtOL9yAs5B5b+HPWVMMbFFuKVpTDn1YuR0h5SCtDkR+3deZjJNRLtrNgPnsrwRfBhA/F8j/p2yps4DY8AiyMg==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.5"
     color "^3.1.2"
-    react-native-safe-area-view "^0.14.9"
+    react-native-iphone-x-helper "^1.3.1"
 
 react-native-platform-touchable@^1.1.1:
   version "1.1.1"
@@ -14789,7 +14794,7 @@ react-native-safe-area-context@3.1.4:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.4.tgz#9b7f883a5ae8da6218d17467a350434005893602"
   integrity sha512-bXx3hqz4LovFoMnJIRGIWL2oJ/PHadXviBKvgZV9yNErtURQLJSn0yfQytVtiqslhaBMZOJwH4R6HiClyofvBg==
 
-react-native-safe-area-view@^0.14.1, react-native-safe-area-view@^0.14.9:
+react-native-safe-area-view@^0.14.1:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.14.9.tgz#90ee8383037010d9a5055a97cf97e4c1da1f0c3d"
   integrity sha512-WII/ulhpVyL/qbYb7vydq7dJAfZRBcEhg4/UWt6F6nAKpLa3gAceMOxBxI914ppwSP/TdUsandFy6lkJQE0z4A==
