@@ -15235,12 +15235,13 @@ reg-gh-app-interface@^1.1.0:
   resolved "https://registry.yarnpkg.com/reg-gh-app-interface/-/reg-gh-app-interface-1.1.0.tgz#a71c80acad06944d21fa5d4fb3d1bf7545a8eb42"
   integrity sha512-hTUJVbmV/67xdqXE+Z/vFpoo+1QdNlQDcrynlKc3d+7mY2trff3n70ETOwhtrxMwSzLxtCTcnHRSIqMeW4AnaQ==
 
-reg-keygen-git-hash-plugin@^0.10.8:
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/reg-keygen-git-hash-plugin/-/reg-keygen-git-hash-plugin-0.10.8.tgz#0735c0cde652175502cd420f07138a3ece2baec6"
-  integrity sha512-YeKp6ZwWGnBB0FL05UDA1cvK0EZpOv1TKlX9xXzOsDp+QxZDINJeA8LFMHslT3ki3PAftRaB/79gFQuDA+q3yQ==
+reg-keygen-git-hash-plugin@^0.10.16:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-keygen-git-hash-plugin/-/reg-keygen-git-hash-plugin-0.10.16.tgz#80ad60b2a5957c51b0766a815bec7f2a27a3adff"
+  integrity sha512-N3ma/KICzzyNOAn6GTjmMorAUntdBr3wsucEeMt/ts/KdMuzgyr9kuxamjVCA/n+/Lc/uOq8MnhxdKRSFUbodg==
   dependencies:
-    reg-suit-util "^0.10.8"
+    reg-suit-util "^0.10.16"
+    shell-escape "^0.2.0"
 
 reg-notify-github-plugin@^0.10.8:
   version "0.10.8"
@@ -15274,10 +15275,10 @@ reg-suit-core@^0.10.8:
     reg-suit-util "^0.10.8"
     rimraf "^3.0.2"
 
-reg-suit-util@^0.10.8:
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.8.tgz#82ee9e92848ecdc09b7eb60f2b0aab4b6b36479a"
-  integrity sha512-eVJ11zsWD9F90Wl27f0H09Let+e6102ZSUDPchHLmBjdsfzajipvUbmjDbuuHi179mmsUtw7qDtb1SoghTDzpQ==
+reg-suit-util@^0.10.16, reg-suit-util@^0.10.8:
+  version "0.10.16"
+  resolved "https://registry.yarnpkg.com/reg-suit-util/-/reg-suit-util-0.10.16.tgz#958028ab74a7968fcc69c350c1906353c7fdc550"
+  integrity sha512-Ul5SqlIgEoO/RU5FkQkj2E6vwHzldvINg5YIbwUQ4KIIHmiXCvyHRNj1mdUMYuGaGRGfET/NwuLOyvYfinCzOA==
   dependencies:
     "@types/cli-progress" "^3.8.0"
     "@types/cli-spinner" "^0.2.0"
@@ -16093,6 +16094,11 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+shell-escape@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/shell-escape/-/shell-escape-0.2.0.tgz#68fd025eb0490b4f567a027f0bf22480b5f84133"
+  integrity sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=
 
 shell-quote@1.6.1, shell-quote@^1.6.1:
   version "1.6.1"
